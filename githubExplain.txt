@@ -30,11 +30,13 @@ git commit -m "[COMMIT_MESSAGE]"
 
 Merging Branches
 ##
-git commit -m "
+git add [FILE/DIRECTORY]
+git commit -m "[COMMIT_MESSAGE]"
 git checkout [RECIEVING_BRANCH]
 git fetch
 git pull
-git merge [MERGING_BRANCH]
+git merge --no-ff [MERGING_BRANCH]
+git branch -d [MERGING_BRANCH]
 ##
 
 Important Commands (other)
