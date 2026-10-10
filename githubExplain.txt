@@ -35,7 +35,6 @@ Merging Branches
 git add [FILE/DIRECTORY]
 git commit -m "[COMMIT_MESSAGE]"
 git checkout [RECIEVING_BRANCH]
-git pull origin
 git merge --no-ff [MERGING_BRANCH] "[COMMIT_MESSAGE]"
 git branch -d [MERGING_BRANCH]
 ##
