@@ -1,0 +1,63 @@
+github how to:
+
+https://www.atlassian.com/git/glossary#commands
+    - very very useful, contains glossary of all commands
+
+git push -u origin master 
+ - pushes branch (master) to github
+
+Cloning a GitHub Repositiory to give a local version
+##
+cd [DIRECTORY]
+git clone [HTTPSLINK]
+##
+e.g for dissertation:
+##
+cd /home/samuel/Documents/Dissertation
+git clone https://github.com/OliviaDrew13/Geant4_GLOSimulation.git
+##
+
+Branching
+##
+git checkout -b [BRANCH_NAME] [EXISTING_BRANCH]
+##
+
+Committing
+##
+git add [FILE/DIRECTORY]
+git commit -m "[COMMIT_MESSAGE]"
+##
+
+Merging Branches
+##
+git commit -m "
+git checkout [RECIEVING_BRANCH]
+git fetch
+git pull
+git merge [MERGING_BRANCH]
+##
+
+Important Commands (other)
+- lists all branches within repositiory
+##
+git branch
+##
+or
+##
+git branch --list
+##
+- deletes branch ("-d" is safe, will prevent deletion of unmerged changes, "-D" is not)
+##
+git branch -d [BRANCH_NAME]
+git branch -D [BRANCH_NAME]
+##
+- state of working directory (branch)
+##
+git status
+##
+- project history
+##
+git log
+##
+
+
