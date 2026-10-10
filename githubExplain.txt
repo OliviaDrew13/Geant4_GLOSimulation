@@ -42,7 +42,7 @@ git branch -d [MERGING_BRANCH]
 
 Pushing to remote repository on GitHub
 ##
-git push -u origin master 
+git push -u origin main
 ##
 
 
