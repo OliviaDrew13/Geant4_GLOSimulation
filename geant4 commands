@@ -1,0 +1,88 @@
+geant 4 download guide
+http://youtube.com/watch?v=zBRLls4eC34&list=PLw3G-vTgPrdDi8iG1TrS7xauTCoCF1vq3
+
+using geant4 requires a make file (contains CMakeLists.txt file information)
+https://geant4-userdoc.web.cern.ch/UsersGuides/ForApplicationDeveloper/html/GettingStarted/makeFile.html
+
+
+SETUP PROCESS (step 1):
+
+##
+cd /home/samuel/geant4-v11.4.2/build
+echo $LD_LIBRARY_PATH
+source /usr/local/bin/geant4.sh
+echo $LD_LIBRARY_PATH
+##
+
+setting up a UI session to run the c++ file
+
+setting up a make file (step 2, optional if already exists):
+ - set up the CMakeLists.txt file, this contains all information for the cmake to run (see above link for more information on the CMakeLists.txt file
+ - we have a separate *build* directory (where the buildscripts are generated and run) and *source* directory (where the sources/code resides, where the .cc file is), we want them in the same file directory
+ - if getting file does not exist, check to see if step 1 has been run in this instance of the terminal
+
+##
+cd [FILE_DIRECTORY_CONTAINING_SOURCE_DIRECTORY]
+mkdir [NAME]_Build
+cd [BUILD_DIRECTORY]
+cmake -DCMAKE_PREFIX_PATH=/home/samuel/geant4-v11.4.2 [SOURCE_DIRECTORY]
+make -j8
+./[EXECUTABLE]
+##
+
+once edits have been done on the source file, we can just run 'make -j8' to update the executable
+##
+make -j8
+##
+
+to just run the file, simply do 
+##
+./[EXECUTABLE]
+##
+
+
+
+using the geant4 UI interface (QT)
+- we can set up 'macro files' (see example B1) which allow us to set up specific visualisations
+
+interactive mode:
+    - uses GUI, we run single commands
+    - simulates visually the results, takes longer to run
+
+batch mode:
+    - does not use GUI, runs off of a macro file (contains commands)
+    - just outputs the results (takes in information from one file and outputs it to another)
+    - ./[EXECUTABLE] [MACRO].mac
+
+look at the example macro files and commands, very useful :D
+
+
+
+
+
+getting into geant 4 config
+
+##
+cd /home/samuel/geant4-v11.4.2/build
+ccmake ..
+##
+
+gives useful information
+
+##
+geant4-config --help
+##
+
+post install setup
+
+sets up library variable - need to do on boot everytime (and be in build directory)
+##
+source /usr/local/bin/geant4.sh
+##
+
+gives library path (returns empty before library variable setup)
+##
+echo $LD_LIBRARY_PATH
+##
+
+
