@@ -3,9 +3,6 @@ github how to:
 https://www.atlassian.com/git/glossary#commands
     - very very useful, contains glossary of all commands
 
-git push -u origin master 
- - pushes branch (master) to github
-
 Cloning a GitHub Repositiory to give a local version
 ##
 cd [DIRECTORY]
@@ -15,6 +12,11 @@ e.g for dissertation:
 ##
 cd /home/samuel/Documents/Dissertation
 git clone https://github.com/OliviaDrew13/Geant4_GLOSimulation.git
+##
+
+Pulling content from GitHub Repository
+##
+git pull origin
 ##
 
 Branching
@@ -33,11 +35,17 @@ Merging Branches
 git add [FILE/DIRECTORY]
 git commit -m "[COMMIT_MESSAGE]"
 git checkout [RECIEVING_BRANCH]
-git fetch
-git pull
-git merge --no-ff [MERGING_BRANCH]
+git pull origin
+git merge --no-ff [MERGING_BRANCH] "[COMMIT_MESSAGE]"
 git branch -d [MERGING_BRANCH]
 ##
+
+Pushing to remote repository on GitHub
+##
+git push -u origin master 
+##
+
+
 
 Important Commands (other)
 - lists all branches within repositiory
