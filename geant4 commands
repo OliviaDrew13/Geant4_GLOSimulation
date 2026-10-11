@@ -20,6 +20,7 @@ setting up a make file (step 2, optional if already exists):
  - set up the CMakeLists.txt file, this contains all information for the cmake to run (see above link for more information on the CMakeLists.txt file
  - we have a separate *build* directory (where the buildscripts are generated and run) and *source* directory (where the sources/code resides, where the .cc file is), we want them in the same file directory
  - if getting file does not exist, check to see if step 1 has been run in this instance of the terminal
+- if any changes are made to the CMake file, this will cause issues with compilation into the build directory, need to delete cache before remaking
 
 ##
 cd [FILE_DIRECTORY_CONTAINING_SOURCE_DIRECTORY]

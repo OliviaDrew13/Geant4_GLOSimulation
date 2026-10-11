@@ -3,6 +3,8 @@ github how to:
 https://www.atlassian.com/git/glossary#commands
     - very very useful, contains glossary of all commands
 
+NB - origin is https://github.com/OliviaDrew13/Geant4_GLOSimulation.git
+
 Cloning a GitHub Repositiory to give a local version
 ##
 cd [DIRECTORY]
