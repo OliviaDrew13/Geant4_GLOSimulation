@@ -11,6 +11,8 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.28.3/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.28.3/CMakeSystem.cmake"
   "/home/samuel/Documents/Dissertation/Geant4_GLOSimulation/FirstProject/FirstProject_Source/CMakeLists.txt"
+  "/home/samuel/Documents/Dissertation/Geant4_GLOSimulation/FirstProject/FirstProject_Source/init_vis.mac"
+  "/home/samuel/Documents/Dissertation/Geant4_GLOSimulation/FirstProject/FirstProject_Source/vis.mac"
   "/usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreConfig.cmake"
   "/usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreConfigExtras.cmake"
   "/usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreConfigExtrasMkspecDir.cmake"
@@ -186,6 +188,8 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/3.28.3/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.28.3/CMakeCCompiler.cmake"
   "CMakeFiles/3.28.3/CMakeCXXCompiler.cmake"
+  "init_vis.mac"
+  "vis.mac"
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 

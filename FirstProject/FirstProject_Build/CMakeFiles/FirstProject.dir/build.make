@@ -83,14 +83,110 @@ CMakeFiles/FirstProject.dir/FirstProject.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/FirstProject.dir/FirstProject.cc.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/samuel/Documents/Dissertation/Geant4_GLOSimulation/FirstProject/FirstProject_Source/FirstProject.cc -o CMakeFiles/FirstProject.dir/FirstProject.cc.s
 
+CMakeFiles/FirstProject.dir/src/ActionInitialization.cc.o: CMakeFiles/FirstProject.dir/flags.make
+CMakeFiles/FirstProject.dir/src/ActionInitialization.cc.o: /home/samuel/Documents/Dissertation/Geant4_GLOSimulation/FirstProject/FirstProject_Source/src/ActionInitialization.cc
+CMakeFiles/FirstProject.dir/src/ActionInitialization.cc.o: CMakeFiles/FirstProject.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/samuel/Documents/Dissertation/Geant4_GLOSimulation/FirstProject/FirstProject_Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/FirstProject.dir/src/ActionInitialization.cc.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FirstProject.dir/src/ActionInitialization.cc.o -MF CMakeFiles/FirstProject.dir/src/ActionInitialization.cc.o.d -o CMakeFiles/FirstProject.dir/src/ActionInitialization.cc.o -c /home/samuel/Documents/Dissertation/Geant4_GLOSimulation/FirstProject/FirstProject_Source/src/ActionInitialization.cc
+
+CMakeFiles/FirstProject.dir/src/ActionInitialization.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/FirstProject.dir/src/ActionInitialization.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/samuel/Documents/Dissertation/Geant4_GLOSimulation/FirstProject/FirstProject_Source/src/ActionInitialization.cc > CMakeFiles/FirstProject.dir/src/ActionInitialization.cc.i
+
+CMakeFiles/FirstProject.dir/src/ActionInitialization.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/FirstProject.dir/src/ActionInitialization.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/samuel/Documents/Dissertation/Geant4_GLOSimulation/FirstProject/FirstProject_Source/src/ActionInitialization.cc -o CMakeFiles/FirstProject.dir/src/ActionInitialization.cc.s
+
+CMakeFiles/FirstProject.dir/src/DetectorConstruction.cc.o: CMakeFiles/FirstProject.dir/flags.make
+CMakeFiles/FirstProject.dir/src/DetectorConstruction.cc.o: /home/samuel/Documents/Dissertation/Geant4_GLOSimulation/FirstProject/FirstProject_Source/src/DetectorConstruction.cc
+CMakeFiles/FirstProject.dir/src/DetectorConstruction.cc.o: CMakeFiles/FirstProject.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/samuel/Documents/Dissertation/Geant4_GLOSimulation/FirstProject/FirstProject_Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/FirstProject.dir/src/DetectorConstruction.cc.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FirstProject.dir/src/DetectorConstruction.cc.o -MF CMakeFiles/FirstProject.dir/src/DetectorConstruction.cc.o.d -o CMakeFiles/FirstProject.dir/src/DetectorConstruction.cc.o -c /home/samuel/Documents/Dissertation/Geant4_GLOSimulation/FirstProject/FirstProject_Source/src/DetectorConstruction.cc
+
+CMakeFiles/FirstProject.dir/src/DetectorConstruction.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/FirstProject.dir/src/DetectorConstruction.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/samuel/Documents/Dissertation/Geant4_GLOSimulation/FirstProject/FirstProject_Source/src/DetectorConstruction.cc > CMakeFiles/FirstProject.dir/src/DetectorConstruction.cc.i
+
+CMakeFiles/FirstProject.dir/src/DetectorConstruction.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/FirstProject.dir/src/DetectorConstruction.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/samuel/Documents/Dissertation/Geant4_GLOSimulation/FirstProject/FirstProject_Source/src/DetectorConstruction.cc -o CMakeFiles/FirstProject.dir/src/DetectorConstruction.cc.s
+
+CMakeFiles/FirstProject.dir/src/EventAction.cc.o: CMakeFiles/FirstProject.dir/flags.make
+CMakeFiles/FirstProject.dir/src/EventAction.cc.o: /home/samuel/Documents/Dissertation/Geant4_GLOSimulation/FirstProject/FirstProject_Source/src/EventAction.cc
+CMakeFiles/FirstProject.dir/src/EventAction.cc.o: CMakeFiles/FirstProject.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/samuel/Documents/Dissertation/Geant4_GLOSimulation/FirstProject/FirstProject_Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/FirstProject.dir/src/EventAction.cc.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FirstProject.dir/src/EventAction.cc.o -MF CMakeFiles/FirstProject.dir/src/EventAction.cc.o.d -o CMakeFiles/FirstProject.dir/src/EventAction.cc.o -c /home/samuel/Documents/Dissertation/Geant4_GLOSimulation/FirstProject/FirstProject_Source/src/EventAction.cc
+
+CMakeFiles/FirstProject.dir/src/EventAction.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/FirstProject.dir/src/EventAction.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/samuel/Documents/Dissertation/Geant4_GLOSimulation/FirstProject/FirstProject_Source/src/EventAction.cc > CMakeFiles/FirstProject.dir/src/EventAction.cc.i
+
+CMakeFiles/FirstProject.dir/src/EventAction.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/FirstProject.dir/src/EventAction.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/samuel/Documents/Dissertation/Geant4_GLOSimulation/FirstProject/FirstProject_Source/src/EventAction.cc -o CMakeFiles/FirstProject.dir/src/EventAction.cc.s
+
+CMakeFiles/FirstProject.dir/src/PrimaryGeneratorAction.cc.o: CMakeFiles/FirstProject.dir/flags.make
+CMakeFiles/FirstProject.dir/src/PrimaryGeneratorAction.cc.o: /home/samuel/Documents/Dissertation/Geant4_GLOSimulation/FirstProject/FirstProject_Source/src/PrimaryGeneratorAction.cc
+CMakeFiles/FirstProject.dir/src/PrimaryGeneratorAction.cc.o: CMakeFiles/FirstProject.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/samuel/Documents/Dissertation/Geant4_GLOSimulation/FirstProject/FirstProject_Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/FirstProject.dir/src/PrimaryGeneratorAction.cc.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FirstProject.dir/src/PrimaryGeneratorAction.cc.o -MF CMakeFiles/FirstProject.dir/src/PrimaryGeneratorAction.cc.o.d -o CMakeFiles/FirstProject.dir/src/PrimaryGeneratorAction.cc.o -c /home/samuel/Documents/Dissertation/Geant4_GLOSimulation/FirstProject/FirstProject_Source/src/PrimaryGeneratorAction.cc
+
+CMakeFiles/FirstProject.dir/src/PrimaryGeneratorAction.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/FirstProject.dir/src/PrimaryGeneratorAction.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/samuel/Documents/Dissertation/Geant4_GLOSimulation/FirstProject/FirstProject_Source/src/PrimaryGeneratorAction.cc > CMakeFiles/FirstProject.dir/src/PrimaryGeneratorAction.cc.i
+
+CMakeFiles/FirstProject.dir/src/PrimaryGeneratorAction.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/FirstProject.dir/src/PrimaryGeneratorAction.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/samuel/Documents/Dissertation/Geant4_GLOSimulation/FirstProject/FirstProject_Source/src/PrimaryGeneratorAction.cc -o CMakeFiles/FirstProject.dir/src/PrimaryGeneratorAction.cc.s
+
+CMakeFiles/FirstProject.dir/src/RunAction.cc.o: CMakeFiles/FirstProject.dir/flags.make
+CMakeFiles/FirstProject.dir/src/RunAction.cc.o: /home/samuel/Documents/Dissertation/Geant4_GLOSimulation/FirstProject/FirstProject_Source/src/RunAction.cc
+CMakeFiles/FirstProject.dir/src/RunAction.cc.o: CMakeFiles/FirstProject.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/samuel/Documents/Dissertation/Geant4_GLOSimulation/FirstProject/FirstProject_Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/FirstProject.dir/src/RunAction.cc.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FirstProject.dir/src/RunAction.cc.o -MF CMakeFiles/FirstProject.dir/src/RunAction.cc.o.d -o CMakeFiles/FirstProject.dir/src/RunAction.cc.o -c /home/samuel/Documents/Dissertation/Geant4_GLOSimulation/FirstProject/FirstProject_Source/src/RunAction.cc
+
+CMakeFiles/FirstProject.dir/src/RunAction.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/FirstProject.dir/src/RunAction.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/samuel/Documents/Dissertation/Geant4_GLOSimulation/FirstProject/FirstProject_Source/src/RunAction.cc > CMakeFiles/FirstProject.dir/src/RunAction.cc.i
+
+CMakeFiles/FirstProject.dir/src/RunAction.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/FirstProject.dir/src/RunAction.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/samuel/Documents/Dissertation/Geant4_GLOSimulation/FirstProject/FirstProject_Source/src/RunAction.cc -o CMakeFiles/FirstProject.dir/src/RunAction.cc.s
+
+CMakeFiles/FirstProject.dir/src/SteppingAction.cc.o: CMakeFiles/FirstProject.dir/flags.make
+CMakeFiles/FirstProject.dir/src/SteppingAction.cc.o: /home/samuel/Documents/Dissertation/Geant4_GLOSimulation/FirstProject/FirstProject_Source/src/SteppingAction.cc
+CMakeFiles/FirstProject.dir/src/SteppingAction.cc.o: CMakeFiles/FirstProject.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/samuel/Documents/Dissertation/Geant4_GLOSimulation/FirstProject/FirstProject_Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/FirstProject.dir/src/SteppingAction.cc.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FirstProject.dir/src/SteppingAction.cc.o -MF CMakeFiles/FirstProject.dir/src/SteppingAction.cc.o.d -o CMakeFiles/FirstProject.dir/src/SteppingAction.cc.o -c /home/samuel/Documents/Dissertation/Geant4_GLOSimulation/FirstProject/FirstProject_Source/src/SteppingAction.cc
+
+CMakeFiles/FirstProject.dir/src/SteppingAction.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/FirstProject.dir/src/SteppingAction.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/samuel/Documents/Dissertation/Geant4_GLOSimulation/FirstProject/FirstProject_Source/src/SteppingAction.cc > CMakeFiles/FirstProject.dir/src/SteppingAction.cc.i
+
+CMakeFiles/FirstProject.dir/src/SteppingAction.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/FirstProject.dir/src/SteppingAction.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/samuel/Documents/Dissertation/Geant4_GLOSimulation/FirstProject/FirstProject_Source/src/SteppingAction.cc -o CMakeFiles/FirstProject.dir/src/SteppingAction.cc.s
+
 # Object files for target FirstProject
 FirstProject_OBJECTS = \
-"CMakeFiles/FirstProject.dir/FirstProject.cc.o"
+"CMakeFiles/FirstProject.dir/FirstProject.cc.o" \
+"CMakeFiles/FirstProject.dir/src/ActionInitialization.cc.o" \
+"CMakeFiles/FirstProject.dir/src/DetectorConstruction.cc.o" \
+"CMakeFiles/FirstProject.dir/src/EventAction.cc.o" \
+"CMakeFiles/FirstProject.dir/src/PrimaryGeneratorAction.cc.o" \
+"CMakeFiles/FirstProject.dir/src/RunAction.cc.o" \
+"CMakeFiles/FirstProject.dir/src/SteppingAction.cc.o"
 
 # External object files for target FirstProject
 FirstProject_EXTERNAL_OBJECTS =
 
 FirstProject: CMakeFiles/FirstProject.dir/FirstProject.cc.o
+FirstProject: CMakeFiles/FirstProject.dir/src/ActionInitialization.cc.o
+FirstProject: CMakeFiles/FirstProject.dir/src/DetectorConstruction.cc.o
+FirstProject: CMakeFiles/FirstProject.dir/src/EventAction.cc.o
+FirstProject: CMakeFiles/FirstProject.dir/src/PrimaryGeneratorAction.cc.o
+FirstProject: CMakeFiles/FirstProject.dir/src/RunAction.cc.o
+FirstProject: CMakeFiles/FirstProject.dir/src/SteppingAction.cc.o
 FirstProject: CMakeFiles/FirstProject.dir/build.make
 FirstProject: /usr/local/lib/libG4Tree.so
 FirstProject: /usr/local/lib/libG4FR.so
@@ -130,7 +226,7 @@ FirstProject: /usr/local/lib/libG4clhep.so
 FirstProject: /usr/local/lib/libG4ptl.so.3.0.0
 FirstProject: /usr/local/lib/libG4zlib.so
 FirstProject: CMakeFiles/FirstProject.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/samuel/Documents/Dissertation/Geant4_GLOSimulation/FirstProject/FirstProject_Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable FirstProject"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/samuel/Documents/Dissertation/Geant4_GLOSimulation/FirstProject/FirstProject_Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable FirstProject"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/FirstProject.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

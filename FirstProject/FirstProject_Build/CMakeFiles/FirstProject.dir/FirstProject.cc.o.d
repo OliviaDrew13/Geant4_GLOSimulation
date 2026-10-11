@@ -150,16 +150,10 @@ CMakeFiles/FirstProject.dir/FirstProject.cc.o: \
  /usr/include/c++/13/bits/basic_ios.tcc \
  /usr/include/c++/13/bits/ostream.tcc /usr/include/c++/13/istream \
  /usr/include/c++/13/bits/istream.tcc \
- /usr/local/include/Geant4/G4RunManager.hh \
- /usr/local/include/Geant4/G4Event.hh /usr/include/c++/13/set \
- /usr/include/c++/13/bits/stl_tree.h \
- /usr/include/c++/13/ext/aligned_buffer.h \
- /usr/include/c++/13/bits/node_handle.h \
- /usr/include/c++/13/bits/stl_set.h \
- /usr/include/c++/13/bits/stl_multiset.h \
- /usr/include/c++/13/bits/erase_if.h /usr/include/c++/13/map \
- /usr/include/c++/13/bits/stl_map.h \
- /usr/include/c++/13/bits/stl_multimap.h \
+ /home/samuel/Documents/Dissertation/Geant4_GLOSimulation/FirstProject/FirstProject_Source/include/ActionInitialization.hh \
+ /usr/local/include/Geant4/G4VUserActionInitialization.hh \
+ /home/samuel/Documents/Dissertation/Geant4_GLOSimulation/FirstProject/FirstProject_Source/include/DetectorConstruction.hh \
+ /usr/local/include/Geant4/G4VUserDetectorConstruction.hh \
  /usr/local/include/Geant4/globals.hh /usr/local/include/Geant4/G4ios.hh \
  /usr/local/include/Geant4/G4Types.hh \
  /usr/local/include/Geant4/G4GlobalConfig.hh /usr/include/c++/13/complex \
@@ -216,7 +210,13 @@ CMakeFiles/FirstProject.dir/FirstProject.cc.o: \
  /usr/include/libintl.h /usr/include/c++/13/bits/codecvt.h \
  /usr/include/c++/13/bits/locale_facets_nonio.tcc \
  /usr/include/c++/13/bits/locale_conv.h \
- /usr/include/c++/13/bits/quoted_string.h /usr/include/c++/13/mutex \
+ /usr/include/c++/13/bits/quoted_string.h /usr/include/c++/13/map \
+ /usr/include/c++/13/bits/stl_tree.h \
+ /usr/include/c++/13/ext/aligned_buffer.h \
+ /usr/include/c++/13/bits/node_handle.h \
+ /usr/include/c++/13/bits/stl_map.h \
+ /usr/include/c++/13/bits/stl_multimap.h \
+ /usr/include/c++/13/bits/erase_if.h /usr/include/c++/13/mutex \
  /usr/include/c++/13/bits/chrono.h /usr/include/c++/13/ratio \
  /usr/include/c++/13/cstdint \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdint.h /usr/include/stdint.h \
@@ -224,7 +224,72 @@ CMakeFiles/FirstProject.dir/FirstProject.cc.o: \
  /usr/include/x86_64-linux-gnu/bits/stdint-least.h \
  /usr/include/c++/13/bits/parse_numbers.h \
  /usr/include/c++/13/bits/std_mutex.h \
- /usr/include/c++/13/bits/unique_lock.h \
+ /usr/include/c++/13/bits/unique_lock.h /usr/include/c++/13/vector \
+ /usr/include/c++/13/bits/stl_uninitialized.h \
+ /usr/include/c++/13/bits/stl_vector.h \
+ /usr/include/c++/13/bits/stl_bvector.h \
+ /usr/include/c++/13/bits/vector.tcc \
+ /usr/local/include/Geant4/G4EmStandardPhysics_option4.hh \
+ /usr/local/include/Geant4/G4VPhysicsConstructor.hh \
+ /usr/local/include/Geant4/G4ParticleTable.hh \
+ /usr/local/include/Geant4/G4ParticleDefinition.hh \
+ /usr/local/include/Geant4/G4PDefManager.hh \
+ /usr/local/include/Geant4/G4AutoLock.hh \
+ /usr/local/include/Geant4/G4Threading.hh /usr/include/c++/13/chrono \
+ /usr/include/c++/13/condition_variable \
+ /usr/include/c++/13/bits/shared_ptr.h \
+ /usr/include/c++/13/bits/shared_ptr_base.h \
+ /usr/include/c++/13/bits/allocated_ptr.h \
+ /usr/include/c++/13/bits/unique_ptr.h \
+ /usr/include/c++/13/ext/concurrence.h /usr/include/c++/13/future \
+ /usr/include/c++/13/bits/atomic_base.h \
+ /usr/include/c++/13/bits/atomic_lockfree_defines.h \
+ /usr/include/c++/13/bits/atomic_futex.h /usr/include/c++/13/atomic \
+ /usr/include/c++/13/bits/std_function.h \
+ /usr/include/c++/13/bits/std_thread.h /usr/include/c++/13/thread \
+ /usr/include/c++/13/bits/this_thread_sleep.h \
+ /usr/local/include/Geant4/pwdefs.hh /usr/include/c++/13/stdlib.h \
+ /usr/local/include/Geant4/CLHEP/Units/PhysicalConstants.h \
+ /usr/local/include/Geant4/CLHEP/Units/SystemOfUnits.h \
+ /usr/local/include/Geant4/G4ParticleDefinition.icc \
+ /usr/local/include/Geant4/G4ParticleTableIterator.hh \
+ /usr/local/include/Geant4/G4ParticleTable.icc \
+ /usr/local/include/Geant4/G4PhysicsListHelper.hh \
+ /usr/local/include/Geant4/G4PhysicsListOrderingParameter.hh \
+ /usr/local/include/Geant4/G4ThreadLocalSingleton.hh \
+ /usr/local/include/Geant4/G4Cache.hh \
+ /usr/local/include/Geant4/G4CacheDetails.hh /usr/include/c++/13/list \
+ /usr/include/c++/13/bits/stl_list.h /usr/include/c++/13/bits/list.tcc \
+ /usr/include/c++/13/functional /usr/include/c++/13/unordered_map \
+ /usr/include/c++/13/bits/unordered_map.h \
+ /usr/include/c++/13/bits/hashtable.h \
+ /usr/include/c++/13/bits/hashtable_policy.h \
+ /usr/include/c++/13/bits/enable_special_members.h \
+ /usr/include/c++/13/array /usr/include/c++/13/compare \
+ /usr/local/include/Geant4/G4VUPLSplitter.hh \
+ /usr/local/include/Geant4/rundefs.hh /usr/local/include/Geant4/QBBC.hh \
+ /usr/local/include/Geant4/G4VModularPhysicsList.hh \
+ /usr/local/include/Geant4/G4VUserPhysicsList.hh \
+ /usr/local/include/Geant4/G4PhysicsModelCatalog.hh \
+ /usr/local/include/Geant4/G4ProductionCutsTable.hh \
+ /usr/local/include/Geant4/G4MaterialCutsCouple.hh \
+ /usr/local/include/Geant4/G4ProductionCuts.hh \
+ /usr/local/include/Geant4/G4MCCIndexConversionTable.hh \
+ /usr/local/include/Geant4/G4Region.hh \
+ /usr/local/include/Geant4/G4GeomSplitter.hh \
+ /usr/local/include/Geant4/geomwdefs.hh \
+ /usr/local/include/Geant4/G4Region.icc \
+ /usr/local/include/Geant4/G4VModularPhysicsList.hh \
+ /usr/local/include/Geant4/G4RunManagerFactory.hh \
+ /usr/local/include/Geant4/G4MTRunManager.hh \
+ /usr/local/include/Geant4/G4MTBarrier.hh \
+ /usr/local/include/Geant4/G4RNGHelper.hh /usr/include/c++/13/queue \
+ /usr/include/c++/13/deque /usr/include/c++/13/bits/stl_deque.h \
+ /usr/include/c++/13/bits/deque.tcc /usr/include/c++/13/bits/stl_queue.h \
+ /usr/local/include/Geant4/G4RunManager.hh \
+ /usr/local/include/Geant4/G4Event.hh /usr/include/c++/13/set \
+ /usr/include/c++/13/bits/stl_set.h \
+ /usr/include/c++/13/bits/stl_multiset.h \
  /usr/local/include/Geant4/evtdefs.hh \
  /usr/local/include/Geant4/G4Allocator.hh \
  /usr/local/include/Geant4/G4AllocatorPool.hh \
@@ -234,26 +299,15 @@ CMakeFiles/FirstProject.dir/FirstProject.cc.o: \
  /usr/local/include/Geant4/CLHEP/Vector/ThreeVector.h \
  /usr/local/include/Geant4/CLHEP/Utility/defs.h \
  /usr/local/include/Geant4/CLHEP/Vector/ThreeVector.icc \
- /usr/local/include/Geant4/pwdefs.hh \
  /usr/local/include/Geant4/G4HCofThisEvent.hh \
  /usr/local/include/Geant4/G4VHitsCollection.hh \
- /usr/include/c++/13/vector /usr/include/c++/13/bits/stl_uninitialized.h \
- /usr/include/c++/13/bits/stl_vector.h \
- /usr/include/c++/13/bits/stl_bvector.h \
- /usr/include/c++/13/bits/vector.tcc \
  /usr/local/include/Geant4/G4DCofThisEvent.hh \
  /usr/local/include/Geant4/G4VDigiCollection.hh \
  /usr/local/include/Geant4/G4TrajectoryContainer.hh \
  /usr/local/include/Geant4/G4VTrajectory.hh /usr/include/c++/13/memory \
  /usr/include/c++/13/bits/stl_raw_storage_iter.h \
- /usr/include/c++/13/bits/align.h /usr/include/c++/13/bits/unique_ptr.h \
- /usr/include/c++/13/bits/shared_ptr.h \
- /usr/include/c++/13/bits/shared_ptr_base.h \
- /usr/include/c++/13/bits/allocated_ptr.h \
- /usr/include/c++/13/ext/concurrence.h \
+ /usr/include/c++/13/bits/align.h \
  /usr/include/c++/13/bits/shared_ptr_atomic.h \
- /usr/include/c++/13/bits/atomic_base.h \
- /usr/include/c++/13/bits/atomic_lockfree_defines.h \
  /usr/include/c++/13/backward/auto_ptr.h \
  /usr/include/c++/13/pstl/glue_memory_defs.h \
  /usr/local/include/Geant4/G4VUserEventInformation.hh \
@@ -263,26 +317,12 @@ CMakeFiles/FirstProject.dir/FirstProject.cc.o: \
  /usr/local/include/Geant4/G4ClassificationOfNewTrack.hh \
  /usr/local/include/Geant4/G4StackedTrack.hh \
  /usr/local/include/Geant4/G4TrackStack.hh \
- /usr/local/include/Geant4/G4SmartTrackStack.hh /usr/include/c++/13/array \
- /usr/include/c++/13/compare \
+ /usr/local/include/Geant4/G4SmartTrackStack.hh \
  /usr/local/include/Geant4/G4SubEventTrackStack.hh \
  /usr/local/include/Geant4/G4SubEvent.hh \
  /usr/local/include/Geant4/G4Track.hh \
- /usr/local/include/Geant4/CLHEP/Units/PhysicalConstants.h \
- /usr/local/include/Geant4/CLHEP/Units/SystemOfUnits.h \
  /usr/local/include/Geant4/trkdefs.hh \
  /usr/local/include/Geant4/G4LogicalVolume.hh \
- /usr/local/include/Geant4/G4Region.hh \
- /usr/local/include/Geant4/G4GeomSplitter.hh \
- /usr/local/include/Geant4/geomwdefs.hh \
- /usr/local/include/Geant4/G4AutoLock.hh \
- /usr/local/include/Geant4/G4Threading.hh /usr/include/c++/13/chrono \
- /usr/include/c++/13/condition_variable /usr/include/c++/13/future \
- /usr/include/c++/13/bits/atomic_futex.h /usr/include/c++/13/atomic \
- /usr/include/c++/13/bits/std_function.h \
- /usr/include/c++/13/bits/std_thread.h /usr/include/c++/13/thread \
- /usr/include/c++/13/bits/this_thread_sleep.h \
- /usr/local/include/Geant4/G4Region.icc \
  /usr/local/include/Geant4/G4VPhysicalVolume.hh \
  /usr/local/include/Geant4/geomdefs.hh \
  /usr/local/include/Geant4/G4RotationMatrix.hh \
@@ -307,9 +347,6 @@ CMakeFiles/FirstProject.dir/FirstProject.cc.o: \
  /usr/local/include/Geant4/G4Log.hh \
  /usr/local/include/Geant4/G4IEEE754.hh \
  /usr/local/include/Geant4/G4LorentzVector.hh \
- /usr/local/include/Geant4/G4ParticleDefinition.hh \
- /usr/local/include/Geant4/G4PDefManager.hh /usr/include/c++/13/stdlib.h \
- /usr/local/include/Geant4/G4ParticleDefinition.icc \
  /usr/local/include/Geant4/G4ParticleMomentum.hh \
  /usr/local/include/Geant4/G4DynamicParticle.icc \
  /usr/local/include/Geant4/G4TrackStatus.hh \
@@ -335,7 +372,6 @@ CMakeFiles/FirstProject.dir/FirstProject.cc.o: \
  /usr/local/include/Geant4/G4TouchableHistory.icc \
  /usr/local/include/Geant4/G4ReferenceCountedHandle.hh \
  /usr/local/include/Geant4/G4VUserTrackInformation.hh \
- /usr/local/include/Geant4/G4PhysicsModelCatalog.hh \
  /usr/local/include/Geant4/G4Material.hh \
  /usr/local/include/Geant4/G4Element.hh \
  /usr/local/include/Geant4/G4ElementTable.hh \
@@ -369,9 +405,6 @@ CMakeFiles/FirstProject.dir/FirstProject.cc.o: \
  /usr/local/include/Geant4/G4TrackVector.hh \
  /usr/local/include/Geant4/G4Step.icc \
  /usr/local/include/Geant4/G4PrimaryTransformer.hh \
- /usr/local/include/Geant4/G4ParticleTable.hh \
- /usr/local/include/Geant4/G4ParticleTableIterator.hh \
- /usr/local/include/Geant4/G4ParticleTable.icc \
  /usr/local/include/Geant4/G4TrackingManager.hh \
  /usr/local/include/Geant4/G4SteppingManager.hh \
  /usr/local/include/Geant4/G4Navigator.hh \
@@ -475,21 +508,51 @@ CMakeFiles/FirstProject.dir/FirstProject.cc.o: \
  /usr/local/include/Geant4/G4UIparameter.hh \
  /usr/local/include/Geant4/G4UserTrackingAction.hh \
  /usr/local/include/Geant4/G4RunManagerKernel.hh \
- /usr/local/include/Geant4/rundefs.hh /usr/include/c++/13/list \
- /usr/include/c++/13/bits/stl_list.h /usr/include/c++/13/bits/list.tcc \
- /usr/local/include/Geant4/G4MTRunManager.hh \
- /usr/local/include/Geant4/G4MTBarrier.hh \
- /usr/local/include/Geant4/G4RNGHelper.hh /usr/include/c++/13/queue \
- /usr/include/c++/13/deque /usr/include/c++/13/bits/stl_deque.h \
- /usr/include/c++/13/bits/deque.tcc /usr/include/c++/13/bits/stl_queue.h \
- /usr/local/include/Geant4/G4RunManager.hh \
+ /usr/local/include/Geant4/G4TaskRunManager.hh \
+ /usr/local/include/Geant4/G4TBBTaskGroup.hh \
+ /usr/local/include/Geant4/PTL/TaskGroup.hh \
+ /usr/local/include/Geant4/PTL/AutoLock.hh \
+ /usr/local/include/Geant4/PTL/ConsumeParameters.hh \
+ /usr/local/include/Geant4/PTL/Types.hh \
+ /usr/local/include/Geant4/PTL/Config.hh \
+ /usr/local/include/Geant4/PTL/JoinFunction.hh \
+ /usr/local/include/Geant4/PTL/Macros.hh /usr/include/c++/13/utility \
+ /usr/include/c++/13/bits/stl_relops.h \
+ /usr/local/include/Geant4/PTL/ScopeDestructor.hh \
+ /usr/local/include/Geant4/PTL/Task.hh \
+ /usr/local/include/Geant4/PTL/VTask.hh \
+ /usr/local/include/Geant4/PTL/detail/CxxBackports.hh \
+ /usr/local/include/Geant4/PTL/ThreadData.hh \
+ /usr/local/include/Geant4/PTL/ThreadPool.hh \
+ /usr/local/include/Geant4/PTL/Threading.hh \
+ /usr/local/include/Geant4/PTL/VUserTaskQueue.hh \
+ /usr/local/include/Geant4/G4TaskGroup.hh \
+ /usr/local/include/Geant4/G4TaskManager.hh \
+ /usr/local/include/Geant4/PTL/TaskManager.hh \
+ /usr/local/include/Geant4/PTL/TaskRunManager.hh \
+ /usr/local/include/Geant4/G4ThreadPool.hh \
+ /usr/local/include/Geant4/G4VUserTaskQueue.hh /usr/include/c++/13/regex \
+ /usr/include/c++/13/bitset /usr/include/c++/13/stack \
+ /usr/include/c++/13/bits/stl_stack.h \
+ /usr/include/c++/13/bits/regex_constants.h \
+ /usr/include/c++/13/bits/regex_error.h \
+ /usr/include/c++/13/bits/regex_automaton.h \
+ /usr/include/c++/13/bits/regex_automaton.tcc \
+ /usr/include/c++/13/bits/regex_scanner.h \
+ /usr/include/c++/13/bits/regex_scanner.tcc \
+ /usr/include/c++/13/bits/regex_compiler.h \
+ /usr/include/c++/13/bits/regex_compiler.tcc \
+ /usr/include/c++/13/bits/regex.h /usr/include/c++/13/bits/regex.tcc \
+ /usr/include/c++/13/bits/regex_executor.h \
+ /usr/include/c++/13/bits/regex_executor.tcc \
  /usr/local/include/Geant4/G4SteppingVerbose.hh \
+ /usr/local/include/Geant4/G4UIExecutive.hh \
+ /usr/local/include/Geant4/G4VUIshell.hh \
  /usr/local/include/Geant4/G4UImanager.hh \
  /usr/local/include/Geant4/G4UIcommandStatus.hh \
  /usr/local/include/Geant4/G4VStateDependent.hh \
  /usr/local/include/Geant4/icomsdefs.hh \
- /usr/local/include/Geant4/G4UIExecutive.hh \
- /usr/local/include/Geant4/G4VUIshell.hh \
+ /usr/local/include/Geant4/G4VisExecutive.hh \
  /usr/local/include/Geant4/G4VisManager.hh \
  /usr/local/include/Geant4/G4VVisManager.hh \
  /usr/local/include/Geant4/G4GraphicsSystemList.hh \
@@ -502,7 +565,6 @@ CMakeFiles/FirstProject.dir/FirstProject.cc.o: \
  /usr/local/include/Geant4/G4Colour.hh \
  /usr/local/include/Geant4/G4Color.hh \
  /usr/local/include/Geant4/G4VisAttributes.icc \
- /usr/include/c++/13/utility /usr/include/c++/13/bits/stl_relops.h \
  /usr/local/include/Geant4/G4ModelingParameters.icc \
  /usr/local/include/Geant4/G4NullModel.hh \
  /usr/local/include/Geant4/G4VModel.hh \
@@ -570,19 +632,12 @@ CMakeFiles/FirstProject.dir/FirstProject.cc.o: \
  /usr/local/include/Geant4/G4VViewer.icc \
  /usr/local/include/Geant4/G4THitsMap.hh \
  /usr/local/include/Geant4/G4THitsCollection.hh \
- /usr/include/c++/13/unordered_map \
- /usr/include/c++/13/bits/unordered_map.h \
- /usr/include/c++/13/bits/hashtable.h \
- /usr/include/c++/13/bits/hashtable_policy.h \
- /usr/include/c++/13/bits/enable_special_members.h \
  /usr/local/include/Geant4/G4VSceneHandler.icc \
  /usr/local/include/Geant4/G4SceneList.hh \
  /usr/local/include/Geant4/G4Scene.hh \
  /usr/local/include/Geant4/G4Scene.icc \
  /usr/local/include/Geant4/G4TrajectoriesModel.hh \
  /usr/local/include/Geant4/G4VisManager.icc \
- /usr/local/include/Geant4/G4VisExecutive.hh \
- /usr/local/include/Geant4/G4VisManager.hh \
  /usr/local/include/Geant4/G4VisExecutive.icc \
  /usr/local/include/Geant4/G4HitFilterFactories.hh \
  /usr/local/include/Geant4/G4VFilter.hh \
@@ -614,4 +669,4 @@ CMakeFiles/FirstProject.dir/FirstProject.cc.o: \
  /usr/local/include/Geant4/G4UImanager.hh \
  /usr/local/include/Geant4/G4UIsession.hh \
  /usr/local/include/Geant4/G4coutDestination.hh \
- /usr/include/c++/13/functional /usr/local/include/Geant4/G4UIbatch.hh
+ /usr/local/include/Geant4/G4UIbatch.hh

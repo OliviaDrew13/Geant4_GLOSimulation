@@ -27,7 +27,7 @@ cd [FILE_DIRECTORY_CONTAINING_SOURCE_DIRECTORY]
 mkdir [NAME]_Build
 cd [BUILD_DIRECTORY]
 cmake -DCMAKE_PREFIX_PATH=/home/samuel/geant4-v11.4.2 [SOURCE_DIRECTORY]
-make -j8
+make -j4
 ./[EXECUTABLE]
 ##
 
