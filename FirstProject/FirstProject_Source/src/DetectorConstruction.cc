@@ -19,21 +19,18 @@ G4VPhysicalVolume* DetectorConstruction::Construct()
   G4NistManager* nist = G4NistManager::Instance();
 
   // Envelope parameters
-  //
   G4double env_sizeXY = 20 * cm, env_sizeZ = 30 * cm;
-  G4Material* env_mat = nist->FindOrBuildMaterial("G4_WATER");
+  G4Material* env_mat = nist->FindOrBuildMaterial("G4_AIR");
 
   // Option to switch on/off checking of volumes overlaps
-  //
   G4bool checkOverlaps = true;
 
-  //
-  // World
-  //
+  // World parameters
   G4double world_sizeXY = 1.2 * env_sizeXY;
   G4double world_sizeZ = 1.2 * env_sizeZ;
   G4Material* world_mat = nist->FindOrBuildMaterial("G4_AIR");
 
+  //initialising the world
   auto solidWorld =
     new G4Box("World",  // its name
               0.5 * world_sizeXY, 0.5 * world_sizeXY, 0.5 * world_sizeZ);  // its size
@@ -51,9 +48,7 @@ G4VPhysicalVolume* DetectorConstruction::Construct()
                                      0,  // copy number
                                      checkOverlaps);  // overlaps checking
 
-  //
-  // Envelope
-  //
+  // initalising the envelope
   auto solidEnv = new G4Box("Envelope",  // its name
                             0.5 * env_sizeXY, 0.5 * env_sizeXY, 0.5 * env_sizeZ);  // its size
 
