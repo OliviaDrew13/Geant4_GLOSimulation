@@ -330,4 +330,9 @@ CMakeFiles/FirstProject.dir/src/DetectorConstruction.cc.o: \
  /usr/local/include/Geant4/G4Pow.hh /usr/local/include/Geant4/G4Exp.hh \
  /usr/local/include/Geant4/G4PVPlacement.hh \
  /usr/local/include/Geant4/G4SystemOfUnits.hh \
- /usr/local/include/Geant4/G4Trd.hh /usr/local/include/Geant4/G4Trd.icc
+ /usr/local/include/Geant4/G4Trd.hh /usr/local/include/Geant4/G4Trd.icc \
+ /usr/local/include/Geant4/G4Isotope.hh \
+ /usr/local/include/Geant4/G4Element.hh \
+ /usr/local/include/Geant4/G4Material.hh \
+ /usr/local/include/Geant4/G4UnitsTable.hh \
+ /usr/local/include/Geant4/G4UnitsTable.icc
