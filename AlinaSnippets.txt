@@ -7,4 +7,12 @@ https://geant4.web.cern.ch/documentation/pipelines/master/bfad_html/ForApplicati
 https://geant4-userdoc.web.cern.ch/UsersGuides/ForApplicationDeveloper/html/TrackingAndPhysics/physicsProcess.html?highlight=scintillation#optical-photon-processes
 
 
+Drawing optical photons differently:
+
+/vis/modeling/trajectories/create/drawByParticleID
+/vis/modeling/trajectories/create/drawByParticleID-0/default/setDrawStepPts true
+/vis/modeling/trajectories/create/drawByParticleID-0/set gamma green
+/vis/modeling/trajectories/create/drawByParticleID-0/set opticalPhoton blue
+
+
 

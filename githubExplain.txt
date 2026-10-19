@@ -3,6 +3,8 @@ github how to:
 https://www.atlassian.com/git/glossary#commands
     - very very useful, contains glossary of all commands
 
+cd /home/samuel/Documents/Dissertation/Geant4_GLOSimulation
+
 NB - origin is https://github.com/OliviaDrew13/Geant4_GLOSimulation.git
 
 Cloning a GitHub Repositiory to give a local version
@@ -29,6 +31,12 @@ git checkout -b [BRANCH_NAME] [EXISTING_BRANCH]
 Committing
 ##
 git add [FILE/DIRECTORY]
+git commit -m "[COMMIT_MESSAGE]"
+##
+
+OR
+##
+git add -A
 git commit -m "[COMMIT_MESSAGE]"
 ##
 
