@@ -49,6 +49,16 @@ git merge --no-ff [MERGING_BRANCH] "[COMMIT_MESSAGE]"
 git branch -d [MERGING_BRANCH]
 ##
 
+OR 
+
+##
+git add [FILE/DIRECTORY]
+git commit -m "[COMMIT_MESSAGE]"
+git checkout [RECIEVING_BRANCH]
+git merge [MERGING_BRANCH]
+git branch -d [MERGING_BRANCH]
+##
+
 Pushing to remote repository on GitHub
 ##
 git push -u origin main

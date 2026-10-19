@@ -1424,6 +1424,7 @@ CMakeFiles/FirstProject.dir/src/DetectorConstruction.cc.o: /home/samuel/Document
   /usr/local/include/Geant4/G4NistManager.hh \
   /usr/local/include/Geant4/G4NistMaterialBuilder.hh \
   /usr/local/include/Geant4/G4Normal3D.hh \
+  /usr/local/include/Geant4/G4OpticalMaterialProperties.hh \
   /usr/local/include/Geant4/G4OrderedTable.hh \
   /usr/local/include/Geant4/G4PVPlacement.hh \
   /usr/local/include/Geant4/G4PhysicsFreeVector.hh \
@@ -4231,6 +4232,8 @@ CMakeFiles/FirstProject.dir/src/SteppingAction.cc.o: /home/samuel/Documents/Diss
 /usr/include/c++/13/system_error:
 
 /usr/include/c++/13/bits/ostream_insert.h:
+
+/usr/local/include/Geant4/G4OpticalMaterialProperties.hh:
 
 /usr/include/c++/13/bits/stl_set.h:
 

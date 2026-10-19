@@ -7,6 +7,7 @@
 #include "G4PVPlacement.hh"
 #include "G4SystemOfUnits.hh"
 #include "G4Trd.hh"
+#include "G4OpticalMaterialProperties.hh"
 
 #include "G4Isotope.hh"
 #include "G4Element.hh"
@@ -83,23 +84,79 @@ G4VPhysicalVolume* DetectorConstruction::Construct()
   //Rectangle: gives a Si box
   
   //material setup
-  G4Material* Si1_mat = new G4Material(name = "Silicon", z=14., a = 28.09*g/mole, density = 2.329*g/cm3);
+  //G4Material* Si1_mat = new G4Material(name = "Silicon", z=14., a = 28.09*g/mole, density = 2.329*g/cm3);
   
   //position setup
-  G4ThreeVector posSi = G4ThreeVector(0*cm, 0*cm, 2.5*cm);
+  //G4ThreeVector posSi = G4ThreeVector(0*cm, 0*cm, 2.5*cm);
   
   //size setup
-  G4double Si_X = 4*cm, Si_Y = 4*cm, Si_Z = 1*cm;
+  //G4double Si_X = 4*cm, Si_Y = 4*cm, Si_Z = 1*cm;
   
-  auto solidSi = new G4Box("ElementalSi", 0.5*Si_X, 0.5*Si_Y, 0.5*Si_Z); //a box with name "ElementalSi"
+  //auto solidSi = new G4Box("ElementalSi", 0.5*Si_X, 0.5*Si_Y, 0.5*Si_Z); //a box with name "ElementalSi"
   
-  auto logicSi = new G4LogicalVolume(solidSi, Si1_mat, "ElemetalSi");
+  //auto logicSi = new G4LogicalVolume(solidSi, Si1_mat, "ElemetalSi");
   
-  new G4PVPlacement(nullptr, posSi, logicSi, "ElementalSi", logicEnv, false, 0, checkOverlaps);
+  //new G4PVPlacement(nullptr, posSi, logicSi, "ElementalSi", logicEnv, false, 0, checkOverlaps);
   
   
-  //Rectangle: gives a CsI box
+  //Rectangle: gives a CsI(Tl) box
   
+  //material setup
+  G4Isotope* Tl205 = new G4Isotope(name="Tl205", iz=81, n=205, a=201.9723446*g/mole);
+  G4Isotope* Tl203 = new G4Isotope(name="Tl203", iz=81, n=203, a=204.9744278*g/mole);
+
+  G4Element* Tl  = new G4Element(name="Thallium", symbol="Tl", ncomponents=2);
+  Tl->AddIsotope(Tl205, abundance= 0.7048*perCent);
+  Tl->AddIsotope(Tl203, abundance= 0.2952*perCent);
+  
+  G4Element* Cs = new G4Element(name="Ceasium",symbol="Cs", z=55 , a = 132.90545196*g/mole);
+  G4Element* I = new G4Element(name="Iodine",symbol="I", z=53 , a = 126.9044719*g/mole);
+  
+  G4Material* CsI_Tl = new G4Material(name = "CsI(Tl)", density = 4.51*g/cm3,3);
+  CsI_Tl-> AddElement(Cs, 0.510114053035733);
+  CsI_Tl-> AddElement(I, 0.488156344412965);
+  CsI_Tl-> AddElement(Tl, 0.001729602551302);
+  
+  const G4int nEntries = 1;
+  
+  G4double CsI_PhotonE[nEntries] = {2.254};
+  G4double CsI_RInd[nEntries] = {1.79};
+  G4double CsI_AbsL[nEntries] = {33.*cm};
+  //relative intensities
+  G4double CsI_Scint[nEntries] = {1};
+  
+  G4MaterialPropertiesTable*CsI_MPT = new G4MaterialPropertiesTable();
+  
+  
+  CsI_MPT->AddProperty("SCINTILLATIONCOMPONENT1", CsI_PhotonE, CsI_Scint, nEntries);
+  CsI_MPT->AddProperty("SCINTILLATIONCOMPONENT2", CsI_PhotonE, CsI_Scint, nEntries);
+  
+  CsI_MPT->AddProperty("RINDEX", CsI_PhotonE, CsI_RInd, nEntries);
+  CsI_MPT->AddProperty("ABSLENGTH", CsI_PhotonE, CsI_AbsL, nEntries);
+  
+  CsI_MPT->AddConstProperty("SCINTILLATIONYIELD", 54000./MeV);
+  CsI_MPT->AddConstProperty("RESOLUTIONSCALE", 1.0);
+  
+  CsI_MPT->AddConstProperty("SCINTILLATIONTIMECONSTANT1", 600*ns);
+  CsI_MPT->AddConstProperty("SCINTILLATIONTIMECONSTANT2", 3500.*ns);
+  CsI_MPT->AddConstProperty("SCINTILLATIONYIELD1", 0.637);
+  CsI_MPT->AddConstProperty("SCINTILLATIONYIELD2", 0.361);
+  CsI_Tl->SetMaterialPropertiesTable(CsI_MPT);
+  
+  
+  
+  
+  //position setup
+  G4ThreeVector posCsI_Tl = G4ThreeVector(0*cm, 0*cm, 2.5*cm);
+  
+  //size setup
+  G4double CsI_Tl_X = 4*cm, CsI_Tl_Y = 4*cm, CsI_Tl_Z = 1*cm;
+  
+  auto solidCsI_Tl = new G4Box("CsI(Tl)", 0.5*CsI_Tl_X, 0.5*CsI_Tl_Y, 0.5*CsI_Tl_Z); //a box with name "ElementalSi"
+  
+  auto logicCsI_Tl = new G4LogicalVolume(solidCsI_Tl, CsI_Tl, "CsI(Tl)");
+  
+  new G4PVPlacement(nullptr, posCsI_Tl, logicCsI_Tl, "CsI(Tl)", logicEnv, false, 0, checkOverlaps);
   
   
   
@@ -160,7 +217,7 @@ G4VPhysicalVolume* DetectorConstruction::Construct()
 
   // Set Si block as scoring volume
   //
-  fScoringVolume = logicSi;
+  fScoringVolume = logicCsI_Tl;
 
   //
   // always return the physical World
