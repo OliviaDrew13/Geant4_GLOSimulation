@@ -29,7 +29,7 @@
 /vis/modeling/trajectories/drawByParticleID-0/default/setDrawStepPts true
 /vis/modeling/trajectories/drawByParticleID-0/default/setStepPtsSize 2
 /vis/modeling/trajectories/drawByParticleID-0/set gamma green
-/vis/modeling/trajectories/drawByParticleID-0/set opticalPhoton blue
+/vis/modeling/trajectories/drawByParticleID-0/set opticalphoton blue
 
 #/vis/modeling/trajectories/create/drawByCharge
 #/vis/modeling/trajectories/drawByCharge-0/default/setDrawStepPts true

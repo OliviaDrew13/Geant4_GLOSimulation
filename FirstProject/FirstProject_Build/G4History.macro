@@ -26,7 +26,7 @@
 /vis/scene/notifyHandlers scene-0
 /vis/modeling/trajectories/drawByParticleID-0/set gamma green
 /vis/scene/notifyHandlers scene-0
-/vis/modeling/trajectories/drawByParticleID-0/set opticalPhoton blue
+/vis/modeling/trajectories/drawByParticleID-0/set opticalphoton blue
 /vis/scene/notifyHandlers scene-0
 /vis/scene/endOfEventAction accumulate
 /vis/set/textColour green
@@ -63,3 +63,10 @@
 /vis/verbose warnings
 /run/beamOn 1
 /vis/scene/notifyHandlers scene-0
+/run/beamOn 1
+/run/beamOn 1
+/run/beamOn 1
+/run/beamOn 1
+/run/beamOn 1
+/run/beamOn 1
+/run/beamOn 1

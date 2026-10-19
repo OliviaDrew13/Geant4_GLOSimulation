@@ -448,7 +448,6 @@ CMakeFiles/FirstProject.dir/FirstProject.cc.o: /home/samuel/Documents/Dissertati
   /usr/local/include/Geant4/G4ElementVector.hh \
   /usr/local/include/Geant4/G4Ellipsoid.hh \
   /usr/local/include/Geant4/G4Ellipsoid.icc \
-  /usr/local/include/Geant4/G4EmStandardPhysics_option4.hh \
   /usr/local/include/Geant4/G4EnvironmentUtils.hh \
   /usr/local/include/Geant4/G4Event.hh \
   /usr/local/include/Geant4/G4EventManager.hh \
@@ -504,6 +503,8 @@ CMakeFiles/FirstProject.dir/FirstProject.cc.o: /home/samuel/Documents/Dissertati
   /usr/local/include/Geant4/G4OpenGLQt.hh \
   /usr/local/include/Geant4/G4OpenGLStoredQt.hh \
   /usr/local/include/Geant4/G4OpenGLStoredX.hh \
+  /usr/local/include/Geant4/G4OpticalParameters.hh \
+  /usr/local/include/Geant4/G4OpticalPhysics.hh \
   /usr/local/include/Geant4/G4Orb.hh \
   /usr/local/include/Geant4/G4Orb.icc \
   /usr/local/include/Geant4/G4OrderedTable.hh \
@@ -1424,7 +1425,6 @@ CMakeFiles/FirstProject.dir/src/DetectorConstruction.cc.o: /home/samuel/Document
   /usr/local/include/Geant4/G4NistManager.hh \
   /usr/local/include/Geant4/G4NistMaterialBuilder.hh \
   /usr/local/include/Geant4/G4Normal3D.hh \
-  /usr/local/include/Geant4/G4OpticalMaterialProperties.hh \
   /usr/local/include/Geant4/G4OrderedTable.hh \
   /usr/local/include/Geant4/G4PVPlacement.hh \
   /usr/local/include/Geant4/G4PhysicsFreeVector.hh \
@@ -3339,8 +3339,6 @@ CMakeFiles/FirstProject.dir/src/SteppingAction.cc.o: /home/samuel/Documents/Diss
 
 /usr/local/include/Geant4/G4Run.hh:
 
-/usr/local/include/Geant4/G4AccumulableManager.icc:
-
 /usr/local/include/Geant4/G4AccumulableManager.hh:
 
 /usr/local/include/Geant4/G4AccVector.icc:
@@ -3741,6 +3739,8 @@ CMakeFiles/FirstProject.dir/src/SteppingAction.cc.o: /home/samuel/Documents/Diss
 
 /usr/include/c++/13/stdlib.h:
 
+/usr/local/include/Geant4/G4OpticalPhysics.hh:
+
 /usr/include/c++/13/sstream:
 
 /usr/include/c++/13/bits/nested_exception.h:
@@ -4039,6 +4039,10 @@ CMakeFiles/FirstProject.dir/src/SteppingAction.cc.o: /home/samuel/Documents/Diss
 
 /usr/local/include/Geant4/G4ClassificationOfNewTrack.hh:
 
+/usr/local/include/Geant4/G4AccumulableManager.icc:
+
+/usr/local/include/Geant4/G4OpticalParameters.hh:
+
 /usr/local/include/Geant4/G4VFacet.hh:
 
 /usr/local/include/Geant4/G4StackManager.hh:
@@ -4232,8 +4236,6 @@ CMakeFiles/FirstProject.dir/src/SteppingAction.cc.o: /home/samuel/Documents/Diss
 /usr/include/c++/13/system_error:
 
 /usr/include/c++/13/bits/ostream_insert.h:
-
-/usr/local/include/Geant4/G4OpticalMaterialProperties.hh:
 
 /usr/include/c++/13/bits/stl_set.h:
 
@@ -4710,8 +4712,6 @@ CMakeFiles/FirstProject.dir/src/SteppingAction.cc.o: /home/samuel/Documents/Diss
 /usr/local/include/Geant4/G4ParticleDefinition.hh:
 
 /usr/local/include/Geant4/CLHEP/Vector/RotationInterfaces.h:
-
-/usr/local/include/Geant4/G4EmStandardPhysics_option4.hh:
 
 /usr/include/c++/13/thread:
 

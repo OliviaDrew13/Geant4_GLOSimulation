@@ -3,7 +3,7 @@
 //including the required headers
 #include "ActionInitialization.hh"
 #include "DetectorConstruction.hh"
-#include "G4EmStandardPhysics_option4.hh"
+#include "G4OpticalPhysics.hh"
 #include "QBBC.hh"
 #include "G4VModularPhysicsList.hh"
 
@@ -30,14 +30,14 @@ int main(int argc, char** argv)
   G4SteppingVerbose::UseBestUnit(precision);
 
   // Construct the default run manager
-  auto runManager = G4RunManagerFactory::CreateRunManager(G4RunManagerType::Default);
+  auto runManager = G4RunManagerFactory::CreateRunManager(G4RunManagerType::Serial);
 
   // Detector construction
   runManager->SetUserInitialization(new DetectorConstruction());
 
   // Physics list - includes physics for optical photons
-  G4VModularPhysicsList* physicsList = new QBBC;
-  G4EmStandardPhysics_option4* opticalPhysics = new G4EmStandardPhysics_option4();
+  auto physicsList = new QBBC;
+  auto opticalPhysics = new G4OpticalPhysics();
   physicsList->RegisterPhysics(opticalPhysics);
   physicsList->SetVerboseLevel(1);
   runManager->SetUserInitialization(physicsList);

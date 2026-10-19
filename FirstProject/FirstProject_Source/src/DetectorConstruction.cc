@@ -7,7 +7,7 @@
 #include "G4PVPlacement.hh"
 #include "G4SystemOfUnits.hh"
 #include "G4Trd.hh"
-#include "G4OpticalMaterialProperties.hh"
+//#include "G4OpticalMaterialProperties.hh"
 
 #include "G4Isotope.hh"
 #include "G4Element.hh"
@@ -102,6 +102,8 @@ G4VPhysicalVolume* DetectorConstruction::Construct()
   //Rectangle: gives a CsI(Tl) box
   
   //material setup
+  
+  //setting up Tl and its isotopes
   G4Isotope* Tl205 = new G4Isotope(name="Tl205", iz=81, n=205, a=201.9723446*g/mole);
   G4Isotope* Tl203 = new G4Isotope(name="Tl203", iz=81, n=203, a=204.9744278*g/mole);
 
@@ -109,42 +111,52 @@ G4VPhysicalVolume* DetectorConstruction::Construct()
   Tl->AddIsotope(Tl205, abundance= 0.7048*perCent);
   Tl->AddIsotope(Tl203, abundance= 0.2952*perCent);
   
+  //setting up Cs and I
   G4Element* Cs = new G4Element(name="Ceasium",symbol="Cs", z=55 , a = 132.90545196*g/mole);
   G4Element* I = new G4Element(name="Iodine",symbol="I", z=53 , a = 126.9044719*g/mole);
   
+  //creating the CsI(Tl)
   G4Material* CsI_Tl = new G4Material(name = "CsI(Tl)", density = 4.51*g/cm3,3);
   CsI_Tl-> AddElement(Cs, 0.510114053035733);
   CsI_Tl-> AddElement(I, 0.488156344412965);
   CsI_Tl-> AddElement(Tl, 0.001729602551302);
   
-  const G4int nEntries = 1;
+  //REQUIRES two+ values here to scintillate
   
-  G4double CsI_PhotonE[nEntries] = {2.254};
-  G4double CsI_RInd[nEntries] = {1.79};
-  G4double CsI_AbsL[nEntries] = {33.*cm};
-  //relative intensities
-  G4double CsI_Scint[nEntries] = {1};
+  //setting up energy dependent values
+  const G4int nEntries = 6;
   
+  G4double CsI_PhotonE[nEntries] = {1.907*eV, 1.99*eV, 2.254*eV, 2.431*eV, 2.61*eV, 3.1*eV};//photon energies
+  G4double CsI_RInd[nEntries] = {1.79, 1.79, 1.79, 1.79, 1.79, 1.79};//refractive indexes
+  G4double CsI_AbsL[nEntries] = {40.*cm, 38.1*cm, 34.8*cm, 32.3*cm, 30.4*cm, 24.7*cm};//absorption length
+  G4double CsI_Scint[nEntries] = {0.289, 0.722, 0.977, 0.961, 0.594, 0.225};//relative intensities
+  
+  
+  //defining the material properites table
   G4MaterialPropertiesTable*CsI_MPT = new G4MaterialPropertiesTable();
   
-  
+  //scintillation components
   CsI_MPT->AddProperty("SCINTILLATIONCOMPONENT1", CsI_PhotonE, CsI_Scint, nEntries);
   CsI_MPT->AddProperty("SCINTILLATIONCOMPONENT2", CsI_PhotonE, CsI_Scint, nEntries);
   
+  //refractive indexes and absorption lengths
   CsI_MPT->AddProperty("RINDEX", CsI_PhotonE, CsI_RInd, nEntries);
   CsI_MPT->AddProperty("ABSLENGTH", CsI_PhotonE, CsI_AbsL, nEntries);
   
+  //scintillation
   CsI_MPT->AddConstProperty("SCINTILLATIONYIELD", 54000./MeV);
   CsI_MPT->AddConstProperty("RESOLUTIONSCALE", 1.0);
   
-  CsI_MPT->AddConstProperty("SCINTILLATIONTIMECONSTANT1", 600*ns);
+  CsI_MPT->AddConstProperty("SCINTILLATIONTIMECONSTANT1", 600.*ns);
   CsI_MPT->AddConstProperty("SCINTILLATIONTIMECONSTANT2", 3500.*ns);
+  
   CsI_MPT->AddConstProperty("SCINTILLATIONYIELD1", 0.637);
   CsI_MPT->AddConstProperty("SCINTILLATIONYIELD2", 0.361);
+  
+  //resolution scale
+  CsI_MPT->AddConstProperty("RESOLUTIONSCALE", 1.0);
+  
   CsI_Tl->SetMaterialPropertiesTable(CsI_MPT);
-  
-  
-  
   
   //position setup
   G4ThreeVector posCsI_Tl = G4ThreeVector(0*cm, 0*cm, 2.5*cm);
@@ -215,7 +227,7 @@ G4VPhysicalVolume* DetectorConstruction::Construct()
                     //~ 0,  // copy number
                     //~ checkOverlaps);  // overlaps checking
 
-  // Set Si block as scoring volume
+  // Set CsI(Tl) block as scoring volume
   //
   fScoringVolume = logicCsI_Tl;
 
