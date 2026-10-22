@@ -1,0 +1,188 @@
+/vis/scene/notifyHandlers scene-0
+### Run 0 starts.
+ Run terminated.
+Run Summary
+  Number of events processed : 10
+  User=0.010000s Real=0.017358s Sys=0.010000s [Cpu=115.2%]
+
+--------------------End of Global Run-----------------------
+ The run is 10 gamma of 622 keV
+
+  --> cumulated edep per run in scoring volume = 68.4254 keV = 1.0963e-14 joule
+  --> mass of scoring volume = 72.16 g 
+
+ Absorbed dose per run in scoring volume = edep/mass = 0.151926 picoGy ; rms = 0.144129 picoGy 
+------------------------------------------------------------
+
+10 events have been kept for refreshing and/or reviewing.
+  "/vis/reviewKeptEvents" to review one by one.
+  To see accumulated, "/vis/enable", then "/vis/viewer/flush" or "/vis/viewer/rebuild".
+/run/beamOn 1
+
+Region <DefaultRegionForTheWorld> --  -- appears in <World> world volume
+ This region is in the mass world.
+ Root logical volume(s) : World 
+ Pointers : G4VUserRegionInformation[0], G4UserLimits[0], G4FastSimulationManager[0], G4UserSteppingAction[0]
+ Materials : G4_AIR CsI(Tl) 
+ Production cuts :   gamma 700 um      e- 700 um      e+ 700 um  proton 700 um 
+
+Region <DefaultRegionForParallelWorld> --  -- is not associated to any world.
+ Root logical volume(s) : 
+ Pointers : G4VUserRegionInformation[0], G4UserLimits[0], G4FastSimulationManager[0], G4UserSteppingAction[0]
+ Materials : 
+ Production cuts :   gamma 700 um      e- 700 um      e+ 700 um  proton 700 um 
+
+========= Table of registered couples ============================
+
+Index : 0     used in the geometry : Yes
+ Material : G4_AIR
+ Range cuts        :  gamma  700 um     e-  700 um     e+  700 um  proton 700 um 
+ Energy thresholds :  gamma  990 eV     e-  990 eV     e+  990 eV  proton 70 keV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 1     used in the geometry : Yes
+ Material : CsI(Tl)
+ Range cuts        :  gamma  700 um     e-  700 um     e+  700 um  proton 700 um 
+ Energy thresholds :  gamma  30.9026 keV    e-  528.417 keV    e+  504.836 keV proton 70 keV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+==================================================================
+
+### Run 1 starts.
+ Run terminated.
+Run Summary
+  Number of events processed : 1
+  User=0.010000s Real=0.001639s Sys=0.000000s [Cpu=610.1%]
+
+--------------------End of Global Run-----------------------
+ The run is 1 gamma of 622 keV
+
+  --> cumulated edep per run in scoring volume = 0 eV  = 0 joule
+  --> mass of scoring volume = 72.16 g 
+
+ Absorbed dose per run in scoring volume = edep/mass = 0 picoGy ; rms = 0 picoGy 
+------------------------------------------------------------
+
+1 event has been kept for refreshing and/or reviewing.
+  "/vis/reviewKeptEvents" to review one by one.
+  To see accumulated, "/vis/enable", then "/vis/viewer/flush" or "/vis/viewer/rebuild".
+/run/beamOn 1
+
+Region <DefaultRegionForTheWorld> --  -- appears in <World> world volume
+ This region is in the mass world.
+ Root logical volume(s) : World 
+ Pointers : G4VUserRegionInformation[0], G4UserLimits[0], G4FastSimulationManager[0], G4UserSteppingAction[0]
+ Materials : G4_AIR CsI(Tl) 
+ Production cuts :   gamma 700 um      e- 700 um      e+ 700 um  proton 700 um 
+
+Region <DefaultRegionForParallelWorld> --  -- is not associated to any world.
+ Root logical volume(s) : 
+ Pointers : G4VUserRegionInformation[0], G4UserLimits[0], G4FastSimulationManager[0], G4UserSteppingAction[0]
+ Materials : 
+ Production cuts :   gamma 700 um      e- 700 um      e+ 700 um  proton 700 um 
+
+========= Table of registered couples ============================
+
+Index : 0     used in the geometry : Yes
+ Material : G4_AIR
+ Range cuts        :  gamma  700 um     e-  700 um     e+  700 um  proton 700 um 
+ Energy thresholds :  gamma  990 eV     e-  990 eV     e+  990 eV  proton 70 keV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 1     used in the geometry : Yes
+ Material : CsI(Tl)
+ Range cuts        :  gamma  700 um     e-  700 um     e+  700 um  proton 700 um 
+ Energy thresholds :  gamma  30.9026 keV    e-  528.417 keV    e+  504.836 keV proton 70 keV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+==================================================================
+
+### Run 2 starts.
+ Run terminated.
+Run Summary
+  Number of events processed : 1
+  User=0.110000s Real=0.140697s Sys=0.030000s [Cpu=99.5%]
+
+--------------------End of Global Run-----------------------
+ The run is 1 gamma of 622 keV
+
+  --> cumulated edep per run in scoring volume = 708.481 keV = 1.13511e-13 joule
+  --> mass of scoring volume = 72.16 g 
+
+ Absorbed dose per run in scoring volume = edep/mass = 1.57305 picoGy ; rms = 0 picoGy 
+------------------------------------------------------------
+
+1 event has been kept for refreshing and/or reviewing.
+  "/vis/reviewKeptEvents" to review one by one.
+  To see accumulated, "/vis/enable", then "/vis/viewer/flush" or "/vis/viewer/rebuild".
+/run/beamOn 1
+
+Region <DefaultRegionForTheWorld> --  -- appears in <World> world volume
+ This region is in the mass world.
+ Root logical volume(s) : World 
+ Pointers : G4VUserRegionInformation[0], G4UserLimits[0], G4FastSimulationManager[0], G4UserSteppingAction[0]
+ Materials : G4_AIR CsI(Tl) 
+ Production cuts :   gamma 700 um      e- 700 um      e+ 700 um  proton 700 um 
+
+Region <DefaultRegionForParallelWorld> --  -- is not associated to any world.
+ Root logical volume(s) : 
+ Pointers : G4VUserRegionInformation[0], G4UserLimits[0], G4FastSimulationManager[0], G4UserSteppingAction[0]
+ Materials : 
+ Production cuts :   gamma 700 um      e- 700 um      e+ 700 um  proton 700 um 
+
+========= Table of registered couples ============================
+
+Index : 0     used in the geometry : Yes
+ Material : G4_AIR
+ Range cuts        :  gamma  700 um     e-  700 um     e+  700 um  proton 700 um 
+ Energy thresholds :  gamma  990 eV     e-  990 eV     e+  990 eV  proton 70 keV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 1     used in the geometry : Yes
+ Material : CsI(Tl)
+ Range cuts        :  gamma  700 um     e-  700 um     e+  700 um  proton 700 um 
+ Energy thresholds :  gamma  30.9026 keV    e-  528.417 keV    e+  504.836 keV proton 70 keV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+==================================================================
+
+### Run 3 starts.
+ Run terminated.
+Run Summary
+  Number of events processed : 1
+  User=0.020000s Real=0.014954s Sys=0.000000s [Cpu=133.7%]
+
+--------------------End of Global Run-----------------------
+ The run is 1 gamma of 622 keV
+
+  --> cumulated edep per run in scoring volume = 0 eV  = 0 joule
+  --> mass of scoring volume = 72.16 g 
+
+ Absorbed dose per run in scoring volume = edep/mass = 0 picoGy ; rms = 0 picoGy 
+------------------------------------------------------------
+
+1 event has been kept for refreshing and/or reviewing.
+  "/vis/reviewKeptEvents" to review one by one.
+  To see accumulated, "/vis/enable", then "/vis/viewer/flush" or "/vis/viewer/rebuild".
+/run/beamOn 40
+
+Region <DefaultRegionForTheWorld> --  -- appears in <World> world volume
+ This region is in the mass world.
+ Root logical volume(s) : World 
+ Pointers : G4VUserRegionInformation[0], G4UserLimits[0], G4FastSimulationManager[0], G4UserSteppingAction[0]
+ Materials : G4_AIR CsI(Tl) 
+ Production cuts :   gamma 700 um      e- 700 um      e+ 700 um  proton 700 um 
+
+Region <DefaultRegionForParallelWorld> --  -- is not associated to any world.
+ Root logical volume(s) : 
+ Pointers : G4VUserRegionInformation[0], G4UserLimits[0], G4FastSimulationManager[0], G4UserSteppingAction[0]
+ Materials : 
+ Production cuts :   gamma 700 um      e- 700 um      e+ 700 um  proton 700 um 
+
+

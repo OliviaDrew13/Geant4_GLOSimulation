@@ -145,7 +145,6 @@ G4VPhysicalVolume* DetectorConstruction::Construct()
   
   //scintillation
   CsI_MPT->AddConstProperty("SCINTILLATIONYIELD", 54000./MeV);
-  CsI_MPT->AddConstProperty("RESOLUTIONSCALE", 1.0);
   
   CsI_MPT->AddConstProperty("SCINTILLATIONTIMECONSTANT1", 600.*ns);
   CsI_MPT->AddConstProperty("SCINTILLATIONTIMECONSTANT2", 3500.*ns);
@@ -164,7 +163,7 @@ G4VPhysicalVolume* DetectorConstruction::Construct()
   //size setup
   G4double CsI_Tl_X = 4*cm, CsI_Tl_Y = 4*cm, CsI_Tl_Z = 1*cm;
   
-  auto solidCsI_Tl = new G4Box("CsI(Tl)", 0.5*CsI_Tl_X, 0.5*CsI_Tl_Y, 0.5*CsI_Tl_Z); //a box with name "ElementalSi"
+  auto solidCsI_Tl = new G4Box("CsI(Tl)", 0.5*CsI_Tl_X, 0.5*CsI_Tl_Y, 0.5*CsI_Tl_Z); //a box with name "CsI(Tl)"
   
   auto logicCsI_Tl = new G4LogicalVolume(solidCsI_Tl, CsI_Tl, "CsI(Tl)");
   
