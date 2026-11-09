@@ -113,8 +113,8 @@ G4VPhysicalVolume* DetectorConstruction::Construct()
   
   //setting up I
   G4Element* I = new G4Element(name="Iodine",symbol="I", z=53 , a = 126.9044719*g/mole);
-  
-  //setting up Si
+
+	//setting up Si
   G4Isotope* Si28 = new G4Isotope(name="Si28", iz = 14, n = 28, a = 27.97692653465*g/mole);
   G4Isotope* Si29 = new G4Isotope(name="Si29", iz = 14, n = 29, a = 28.97649466490*g/mole);
   G4Isotope* Si30 = new G4Isotope(name="Si30", iz = 14, n = 30, a = 28.97649466490*g/mole);
@@ -136,18 +136,21 @@ G4VPhysicalVolume* DetectorConstruction::Construct()
   
   //setting up Sn
   
-  G4Element* Sn  = nist->FindOrBuildElement("G4_Sn");
+  G4Element* Sn = new G4Element(name="Tin",symbol="Sn", z=50 , a =  118.710*g/mole);
   
   //setting up In
   
-  G4Element* In = nist->FindOrBuildElement("G4_In");
+  G4Element* In = new G4Element(name="Indium",symbol="In", z=49 , a =  114.818*g/mole);
   
   //setting up B
-  
-  G4Element* B = nist->FindOrBuildElement("G4_B");
+  G4Element* B = new G4Element(name="Boron",symbol="B", z=5 , a =  10.821*g/mole);
   
   //setting up P
-  G4Element* P = nist->FindOrBuildElement("G4_P");
+  G4Element* P = new G4Element(name="Phosophorous",symbol="P", z=15 , a = 30.973761998*g/mole);
+  
+  //setting up Al 
+  G4Element* Al = new G4Element(name = "Aluminium", symbol = "Al", z = 14, a = 26.9815385*g/mole);
+
   
   // MATERIALS
   
@@ -195,7 +198,8 @@ G4VPhysicalVolume* DetectorConstruction::Construct()
   CsI_MPT->AddConstProperty("RESOLUTIONSCALE", 1.0);
   
   CsI_Tl->SetMaterialPropertiesTable(CsI_MPT);
-  
+    
+  //Object Definition
   
   //material setup: Glass
   
@@ -250,15 +254,15 @@ G4VPhysicalVolume* DetectorConstruction::Construct()
   
   //material setup: Silicons
   
-  G4Material* pSi = new G4Material("pSi", a = 2.3296, 2);
+  G4Material* pSi = new G4Material("pSi", a = 2.3296*g/cm3, 2);
   pSi->AddElement(B, 0.002001934666*perCent);
   pSi->AddElement(Si, 99.9979980653*perCent);
   
-  G4Material* nSi = new G4Material("nSi", a = 2.3296, 2);
-  pSi->AddElement(P,  0.2001934666*perCent);
-  pSi->AddElement(Si, 99.7998065334*perCent);
+  G4Material* nSi = new G4Material("nSi", a = 2.3296*g/cm3, 2);
+  nSi->AddElement(P,  0.2001934666*perCent);
+  nSi->AddElement(Si, 99.7998065334*perCent);
   
-  G4Material* iSi = new G4Material("iSi", a = 2.326, 1);
+  G4Material* iSi = new G4Material("iSi", a = 2.3296*g/cm3, 1);
   iSi->AddElement(Si, 1);
   
   // optical properties, silicons
@@ -281,12 +285,10 @@ G4VPhysicalVolume* DetectorConstruction::Construct()
   iSi->SetMaterialPropertiesTable(Si_MPT);
 
   //Material setup: Al
-  G4Material* Al = nist->FindOrBuildMaterial("G4_Al");
+  G4Material* mAl = new G4Material("Al", a = 2.7*g/cm3, 1);
+  mAl-> AddElement(Al, 1);
   
-    
-  //Object Definition
-  
-  
+  //POSITION DEFINITION
   //CsI(Tl)
   //position setup
   G4ThreeVector posCsI_Tl = G4ThreeVector(0*cm, 0*cm, 2.5*cm);
