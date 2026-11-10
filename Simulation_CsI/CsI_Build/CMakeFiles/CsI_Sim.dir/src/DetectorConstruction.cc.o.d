@@ -269,7 +269,8 @@ CMakeFiles/CsI_Sim.dir/src/DetectorConstruction.cc.o: \
  /usr/local/include/Geant4/CLHEP/Geometry/Vector3D.h \
  /usr/local/include/Geant4/G4Visible.hh \
  /usr/local/include/Geant4/G4Visible.icc \
- /usr/local/include/Geant4/G4Box.icc /usr/local/include/Geant4/G4Cons.hh \
+ /usr/local/include/Geant4/G4Box.icc /usr/local/include/Geant4/G4Tubs.hh \
+ /usr/local/include/Geant4/G4Tubs.icc /usr/local/include/Geant4/G4Cons.hh \
  /usr/local/include/Geant4/G4Cons.icc \
  /usr/local/include/Geant4/G4LogicalVolume.hh /usr/include/c++/13/memory \
  /usr/include/c++/13/bits/stl_raw_storage_iter.h \

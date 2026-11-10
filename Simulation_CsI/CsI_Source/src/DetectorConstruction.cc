@@ -1,6 +1,7 @@
 #include "DetectorConstruction.hh"
 
 #include "G4Box.hh"
+#include "G4Tubs.hh"
 #include "G4Cons.hh"
 #include "G4LogicalVolume.hh"
 #include "G4NistManager.hh"
@@ -137,6 +138,7 @@ G4VPhysicalVolume* DetectorConstruction::Construct()
   //setting up Sn
   
   G4Element* Sn = new G4Element(name="Tin",symbol="Sn", z=50 , a =  118.710*g/mole);
+  //G4Element* Sn = nist->FindOrBuildElement("Sn"); //WORKS?????? but G4_Sn doesn't
   
   //setting up In
   
@@ -269,8 +271,8 @@ G4VPhysicalVolume* DetectorConstruction::Construct()
   
   //setting up energy dependent values
   G4double Si_PhotonE[nEntries] = {1.907*eV, 1.99*eV, 2.254*eV, 2.431*eV, 2.61*eV, 3.1*eV};//photon energies
-  G4double Si_RInd[nEntries] = {3.8515, 3.9058, 4.0870, 4.2485, 4.4571, 5.5674};//refractive indexes
-  G4double Si_AbsL[nEntries] = {3.142480045e-4*cm, 2.244517765e04*cm, 1.070595037e-4*cm, 6.327111674e-5*cm, 4.008658703e-5*cm, 8.244023083e-6*cm};//absorption length
+  G4double Si_RInd[nEntries] = {4.5231, 4.6171, 4.8521, 4.9897, 5.1028, 5.1858};//refractive indexes
+  G4double Si_AbsL[nEntries] = {2.76e-5*cm, 1.9e-6*cm, 7.83e-6*cm, 5.02e-6*cm, 3.44e-6*cm, 1.5e-6*cm};//absorption length
   
   //setting up material properties table
   G4MaterialPropertiesTable *Si_MPT = new G4MaterialPropertiesTable();
@@ -290,19 +292,73 @@ G4VPhysicalVolume* DetectorConstruction::Construct()
   
   //POSITION DEFINITION
   //CsI(Tl)
-  //position setup
-  G4ThreeVector posCsI_Tl = G4ThreeVector(0*cm, 0*cm, 2.5*cm);
-  
-  //size setup
-  G4double CsI_Tl_X = 4*cm, CsI_Tl_Y = 4*cm, CsI_Tl_Z = 1*cm;
-  
-  auto solidCsI_Tl = new G4Box("CsI(Tl)", 0.5*CsI_Tl_X, 0.5*CsI_Tl_Y, 0.5*CsI_Tl_Z); //a box with name "CsI(Tl)"
-  
+  //position vector
+  G4ThreeVector posCsI_Tl = G4ThreeVector(0*cm, 0*cm, -0.5*cm); //This is the position of the MIDPOINT
+  //cylinder parameters
+  G4double innerRadius_CsI = 0.*cm;
+  G4double outerRadius_CsI = 2.5*cm;
+  G4double hz_CsI = 1*cm; //G4 needs 1/2 width for this value, full width entered here and halved at definition for ease of use
+  G4double startAngle_CsI = 0.*deg;
+  G4double spanningAngle_CsI = 360.*deg;
+  //defining the cylinder
+  G4Tubs* solidCsI_Tl = new G4Tubs("CsI(Tl)", innerRadius_CsI, outerRadius_CsI, hz_CsI/2, startAngle_CsI, spanningAngle_CsI);
+  //defining logical volume            
   auto logicCsI_Tl = new G4LogicalVolume(solidCsI_Tl, CsI_Tl, "CsI(Tl)");
-  
+  //placing the CsI
   new G4PVPlacement(nullptr, posCsI_Tl, logicCsI_Tl, "CsI(Tl)", logicEnv, false, 0, checkOverlaps);
   
+  //Glass
+  //position vector
+  G4ThreeVector posGlass = G4ThreeVector(0*cm, 0*cm, 0.55 *mm); //glass thickness is 1.1mm 
+  //box parameters
+  G4double Glass_X = 56.7*mm, Glass_Y = 96.7*mm, Glass_Z = 1.1*mm;
+  //defining the box
+  auto solid_Glass = new G4Box("Glass", 0.5*Glass_X, 0.5*Glass_Y, 0.5*Glass_Z);
+  //defining logical volume
+  auto logicGlass = new G4LogicalVolume(solid_Glass, SiO2, "Glass");
+  //placing the glass
+  new G4PVPlacement(nullptr, posGlass, logicGlass, "Glass", logicEnv, false, 0, checkOverlaps);
   
+  //ITO
+  //position vector
+  G4ThreeVector posITO = G4ThreeVector(0*cm, 0*cm, 1100045*nm); //ITO thickness is 90nm
+  //box parameters
+  G4double ITO_X = 56.7*mm, ITO_Y = 96.7*mm, ITO_Z = 90*nm;
+  //defining the box
+  auto solid_ITO = new G4Box("ITO", 0.5*ITO_X, 0.5*ITO_Y, 0.5*ITO_Z);
+  //defining logical volume
+  auto logicITO = new G4LogicalVolume(solid_ITO, ITO, "ITO");
+  //placing the ITO
+  new G4PVPlacement(nullptr, posITO, logicITO, "ITO", logicEnv, false, 0, checkOverlaps);
+  
+  //Silicon - all undoped
+  //position vector
+  G4ThreeVector posSi = G4ThreeVector(0*cm, 0*cm, 1100210*nm); //Si thickness is 240nm
+  //box parameters
+  G4double Si_X = 53.3*mm, Si_Y = 94.7*mm, Si_Z = 240*nm;
+  //defining the box
+  auto solid_Si = new G4Box("Si", 0.5*Si_X, 0.5*Si_Y, 0.5*Si_Z);
+  //defining logical volume
+  auto logicSi = new G4LogicalVolume(solid_Si, iSi, "Silicon");
+  //placing the Silicon
+  new G4PVPlacement(nullptr, posSi, logicSi, "Si", logicEnv, false, 0, checkOverlaps);
+  
+  //Al
+  //position vector
+  G4ThreeVector posAl = G4ThreeVector(0*cm, 0*cm, 1100380*nm); //Al thickness is 100nm
+  //box parameters
+  G4double Al_X = 56.7*mm, Al_Y = 96.7*mm, Al_Z = 100*nm;
+  //defining the box
+  auto solid_Al = new G4Box("Al", 0.5*Al_X, 0.5*Al_Y, 0.5*Al_Z);
+  //defining logical volume
+  auto logicAl = new G4LogicalVolume(solid_Al, mAl, "Aluminium");
+  //placing the Al
+  new G4PVPlacement(nullptr, posAl, logicAl, "Al", logicEnv, false, 0, checkOverlaps);
+  
+    
+  //size setup
+  //G4double CsI_Tl_X = 4*cm, CsI_Tl_Y = 4*cm, CsI_Tl_Z = 1*cm;
+  //auto solidCsI_Tl = new G4Box("CsI(Tl)", 0.5*CsI_Tl_X, 0.5*CsI_Tl_Y, 0.5*CsI_Tl_Z); //a box with name "CsI(Tl)"
   
   //~ //
   //~ // Shape 1
