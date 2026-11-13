@@ -24,7 +24,8 @@ class SteppingAction : public G4UserSteppingAction
 
   private:
     EventAction* fEventAction = nullptr;
-    G4LogicalVolume* fScoringVolume = nullptr;
+    G4LogicalVolume* scintScoringVolume = nullptr;
+    G4LogicalVolume* SiScoringVolume = nullptr;
 };
 
 }  // namespace B1

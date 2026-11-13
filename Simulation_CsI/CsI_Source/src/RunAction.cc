@@ -43,32 +43,35 @@ RunAction::RunAction()
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
-void RunAction::BeginOfRunAction(const G4Run*)
+void RunAction::BeginOfRunAction(const G4Run* run)
 {
 	
-  // analysis manager to get a csv file with the energy deposition data
+  // analysis manager to create a CSV file with the required data
   auto analysisManager = G4AnalysisManager::Instance();
   analysisManager->SetDefaultFileType("csv");
-  analysisManager->OpenFile("/home/samuel/Documents/Dissertation/Geant4_GLOSimulation/Simulation_CsI/EnergyDeposition_CsI.csv");
+  std::string runnumber = std::to_string(run->GetRunID());
+  analysisManager->OpenFile("/home/samuel/Documents/Dissertation/Geant4_GLOSimulation/Simulation_CsI/CsI_Data_" + runnumber);
 
   // gamma radiation deposition into CsI
-  analysisManager->CreateNtuple("CsI(Tl)", "Energy Deposition Data");   //tuple 0
+  analysisManager->CreateNtuple("EventData", "CsI(Tl)");   //tuple 0
   analysisManager->CreateNtupleIColumn("Event"); //column0
-  analysisManager->CreateNtupleDColumn("Edep");  // column 1
+  analysisManager->CreateNtupleDColumn("Energy Deposited in CsI by single Gamma (MeV)");  // column 1
+  analysisManager->CreateNtupleIColumn("Number of Produced Scintillation Photons"); //column 2
+  analysisManager->CreateNtupleIColumn("Number of Photons absorped by Si"); //column 3
   analysisManager->FinishNtuple();
 
-  // photon absorbtion data - NOTE: is this any photon absorbtion? how do we make sure this tracks only Si absorbtion
-  analysisManager->CreateNtuple("CsI(Tl)", "Photon absorption");   //tuple 1
+  // photon absorbtion data
+  analysisManager->CreateNtuple("PhotonTracks", "Si");   //tuple 1
   analysisManager->CreateNtupleIColumn("Event");  // column 0
-  analysisManager->CreateNtupleIColumn("Track num");  // column 1
-  analysisManager->CreateNtupleDColumn("edep");  // column 2
+  analysisManager->CreateNtupleIColumn("Photon Track num");  // column 1
+  analysisManager->CreateNtupleDColumn("Energy Deposited in Si by single photon (MeV)");  // column 2
   analysisManager->FinishNtuple();
 
   // number of scintillation photons 
-  analysisManager->CreateNtuple("CsI(Tl)", "N Scintillation Photons");   //tuple 2
-  analysisManager->CreateNtupleIColumn("Event");  // column 0
-  analysisManager->CreateNtupleIColumn("Scintillation Photons");  // column 1
-  analysisManager->FinishNtuple();
+  //analysisManager->CreateNtuple("N Scintillation Photons", "Produced by CsI");   //tuple 2
+  //analysisManager->CreateNtupleIColumn("Event");  // column 0
+  //analysisManager->CreateNtupleIColumn("Scintillation Photons");  // column 1
+  //analysisManager->FinishNtuple();
   
   
   // inform the runManager to save random number seed
@@ -100,10 +103,10 @@ void RunAction::EndOfRunAction(const G4Run* run)
     rms = std::sqrt(rms);
   else
     rms = 0.;
-
+//Getting the energy deposition stats for the scintillator
   const auto detConstruction = static_cast<const DetectorConstruction*>(
     G4RunManager::GetRunManager()->GetUserDetectorConstruction());
-  G4double mass = detConstruction->GetScoringVolume()->GetMass();
+  G4double mass = detConstruction->GetScintScoringVolume()->GetMass();
   G4double dose = edep / mass;
   G4double rmsDose = rms / mass;
 
@@ -155,6 +158,11 @@ void RunAction::AddEdep(G4double edep)
 void RunAction::AddScintillationPhoton(G4double photons)
 {
   fScintillationPhotons += photons;
+}
+
+void RunAction::AddAbsorpedPhoton(G4double abphotons)
+{
+  fAbsorpedPhotons += abphotons;
 }
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......

@@ -31,10 +31,11 @@ void SteppingAction::UserSteppingAction(const G4Step* step)
   }
 }
 
-  if (!fScoringVolume) {
+  if (!scintScoringVolume) {
     const auto detConstruction = static_cast<const DetectorConstruction*>(
       G4RunManager::GetRunManager()->GetUserDetectorConstruction());
-    fScoringVolume = detConstruction->GetScoringVolume();
+    scintScoringVolume = detConstruction->GetScintScoringVolume();
+    SiScoringVolume = detConstruction->GetSiScoringVolume();
   }
 
   // get volume of the current step
@@ -42,14 +43,16 @@ void SteppingAction::UserSteppingAction(const G4Step* step)
     step->GetPreStepPoint()->GetTouchableHandle()->GetVolume()->GetLogicalVolume();
 
   // check if we are in scoring volume
-  if (volume != fScoringVolume) return;
+  if (volume != scintScoringVolume && volume != SiScoringVolume) {return;}
 
-  // collect energy deposited in this step
+  // collect energy deposited the CsI in this step
+  if (volume == scintScoringVolume){
   G4double edepStep = step->GetTotalEnergyDeposit();
   fEventAction->AddEdep(edepStep);
-
+}
   //trying to get energies of photons being absorbed by the silicon
   
+  if (volume == SiScoringVolume){
   G4Track* track= step->GetTrack();
   const G4ParticleDefinition* particle = track->GetDefinition();
 
@@ -65,8 +68,11 @@ void SteppingAction::UserSteppingAction(const G4Step* step)
       analysisManager->FillNtupleIColumn(1,1, track->GetTrackID());
       analysisManager->FillNtupleDColumn(1,2, photonEnergy);
       analysisManager->AddNtupleRow(1);
+      
+      fEventAction->AddAbsorpedPhoton();
     }
   }
+}
 
 }
 

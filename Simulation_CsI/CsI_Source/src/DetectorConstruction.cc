@@ -339,10 +339,11 @@ G4VPhysicalVolume* DetectorConstruction::Construct()
   new G4PVPlacement(nullptr, posAl, logicAl, "Al", logicEnv, false, 0, checkOverlaps);
   
 
-  // Set CsI(Tl) block as scoring volume
+  // Seting scoring volumes
   //
   scintScoringVolume = logicCsI_Tl;
-  //PVScoringVolume = 
+  SiScoringVolume = logicSi;
+  
 
   //
   // always return the physical World

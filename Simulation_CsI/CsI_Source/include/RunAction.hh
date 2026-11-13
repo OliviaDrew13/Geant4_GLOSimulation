@@ -28,11 +28,13 @@ class RunAction : public G4UserRunAction
 
     void AddEdep(G4double edep);
     void AddScintillationPhoton(G4double photons);
+    void AddAbsorpedPhoton(G4double abphotons);
 
   private:
     G4Accumulable<G4double> fEdep = 0.;
     G4Accumulable<G4double> fEdep2 = 0.;
     G4Accumulable<G4int> fScintillationPhotons = 0.;
+    G4Accumulable<G4int> fAbsorpedPhotons = 0.;
 };
 
 }  // namespace B1

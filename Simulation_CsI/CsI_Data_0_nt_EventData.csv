@@ -1,0 +1,13 @@
+#class tools::wcsv::ntuple
+#title CsI(Tl)
+#separator 44
+#vector_separator 59
+#column int Event
+#column double Energy Deposited in CsI by single Gamma (MeV)
+#column int Number of Produced Scintillation Photons
+#column int Number of Photons absorped by Si
+0,0,0,0
+1,0.0796059,4256,594
+2,0.69547,37969,5378
+3,0,0,0
+4,0,0,0

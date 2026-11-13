@@ -17,6 +17,7 @@ void EventAction::BeginOfEventAction(const G4Event*)
 {
   fEdep = 0.;
   fScintillationPhotons = 0.;
+  fAbsorpedPhotons = 0.;
 }
 
 
@@ -33,12 +34,14 @@ void EventAction::EndOfEventAction(const G4Event* event)
   auto analysisManager = G4AnalysisManager::Instance();
   analysisManager->FillNtupleIColumn(0,0, eventID);
   analysisManager->FillNtupleDColumn(0,1, fEdep);
+  analysisManager->FillNtupleIColumn(0,2, fScintillationPhotons);
+  analysisManager->FillNtupleIColumn(0,3, fAbsorpedPhotons);
   analysisManager->AddNtupleRow(0);
 
   //recording number of scintillation photons
-  analysisManager->FillNtupleIColumn(2,0, eventID);
-  analysisManager->FillNtupleIColumn(2,1, fScintillationPhotons);
-  analysisManager->AddNtupleRow(2);
+  //analysisManager->FillNtupleIColumn(2,0, eventID);
+  //analysisManager->FillNtupleIColumn(2,1, fScintillationPhotons);
+  //analysisManager->AddNtupleRow(2);
 
   //What this does: Each event ends with one new row in the CSV containing the total energy deposited in the scoring volume during that event.
 }
