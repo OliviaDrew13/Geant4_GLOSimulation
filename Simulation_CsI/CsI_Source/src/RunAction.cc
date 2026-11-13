@@ -24,7 +24,6 @@ namespace CsI
 RunAction::RunAction()
 {
   // add new units for dose
-  //
   const G4double milligray = 1.e-3 * gray;
   const G4double microgray = 1.e-6 * gray;
   const G4double nanogray = 1.e-9 * gray;
@@ -35,7 +34,7 @@ RunAction::RunAction()
   new G4UnitDefinition("nanogray", "nanoGy", "Dose", nanogray);
   new G4UnitDefinition("picogray", "picoGy", "Dose", picogray);
 
-  // Register accumulable to the accumulable manager
+  // Register accumulables to the accumulable manager, this allows us to manage and reset them when required
   G4AccumulableManager* accumulableManager = G4AccumulableManager::Instance();
   accumulableManager->Register(fEdep);
   accumulableManager->Register(fEdep2);
@@ -51,11 +50,13 @@ void RunAction::BeginOfRunAction(const G4Run* run)
   // analysis manager to create a CSV file with the required data
   auto analysisManager = G4AnalysisManager::Instance();
   analysisManager->SetDefaultFileType("csv");
+  //this prevents us from overwriting the previous run of data collection (within the same UI or macro run)
   std::string runnumber = std::to_string(run->GetRunID());
   analysisManager->OpenFile("/home/samuel/Documents/Dissertation/Geant4_GLOSimulation/Simulation_CsI/CsI_Data_" + runnumber);
 
-  // gamma radiation deposition into CsI
-  analysisManager->CreateNtuple("EventData", "CsI(Tl)");   //tuple 0
+// setting up the data to save to csv
+  // general data
+  analysisManager->CreateNtuple("EventData", "CsI(Tl)");   //tuple 0 // the first option of the tuple is appended after run number in the CSV name
   analysisManager->CreateNtupleIColumn("Event"); //column0
   analysisManager->CreateNtupleDColumn("Energy Deposited in CsI by single Gamma (MeV)");  // column 1
   analysisManager->CreateNtupleDColumn("Energy Deposited in Si by All Photons (MeV)");  // column 2
@@ -69,13 +70,6 @@ void RunAction::BeginOfRunAction(const G4Run* run)
   analysisManager->CreateNtupleIColumn("Photon Track num");  // column 1
   analysisManager->CreateNtupleDColumn("Energy Deposited in Si by single photon (MeV)");  // column 2
   analysisManager->FinishNtuple();
-
-  // number of scintillation photons 
-  //analysisManager->CreateNtuple("N Scintillation Photons", "Produced by CsI");   //tuple 2
-  //analysisManager->CreateNtupleIColumn("Event");  // column 0
-  //analysisManager->CreateNtupleIColumn("Scintillation Photons");  // column 1
-  //analysisManager->FinishNtuple();
-  
   
   // inform the runManager to save random number seed
   G4RunManager::GetRunManager()->SetRandomNumberStore(false);
@@ -97,7 +91,6 @@ void RunAction::EndOfRunAction(const G4Run* run)
   accumulableManager->Merge();
 
   // Compute dose = total energy deposit in a run and its variance
-  //
   G4double edep = fEdep.GetValue();
   G4double edep2 = fEdep2.GetValue();
 
@@ -106,6 +99,7 @@ void RunAction::EndOfRunAction(const G4Run* run)
     rms = std::sqrt(rms);
   else
     rms = 0.;
+    
 //Getting the energy deposition stats for the scintillator
   const auto detConstruction = static_cast<const DetectorConstruction*>(
     G4RunManager::GetRunManager()->GetUserDetectorConstruction());
@@ -152,6 +146,7 @@ void RunAction::EndOfRunAction(const G4Run* run)
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
+//required for each type of accumulation function
 void RunAction::AddEdep(G4double edep)
 {
   fEdep += edep;

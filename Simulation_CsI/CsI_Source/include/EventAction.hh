@@ -23,13 +23,15 @@ class EventAction : public G4UserEventAction
     void BeginOfEventAction(const G4Event* event) override;
     void EndOfEventAction(const G4Event* event) override;
 
+	//defining the functions to calculate the collected data
     void AddEdep(G4double edep) { fEdep += edep; }
     void AddSiPhotonEdep(G4double SiPhotonEdep) {fSiPhotonEdep += SiPhotonEdep;}
-    void AddScintillationPhoton() { fScintillationPhotons += 1; }   //function to count the number of scintillation photons produced in each event
+    void AddScintillationPhoton() { fScintillationPhotons += 1; }  
     void AddAbsorpedPhoton(){fAbsorpedPhotons += 1;}
 
   private:
     RunAction* fRunAction = nullptr;
+    //starting values for the above functions
     G4double fEdep = 0.;
     G4double fSiPhotonEdep = 0.;
     G4double fScintillationPhotons = 0.;

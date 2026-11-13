@@ -25,6 +25,7 @@ G4VPhysicalVolume* DetectorConstruction::Construct()
   // Get nist material manager
   G4NistManager* nist = G4NistManager::Instance();
   
+  //defining names of data to insert
   G4String name, symbol;             // a=mass of a mole;
   G4double a, z, density;            // z=mean number of protons;
   G4int iz, n;                       // iz=nb of protons  in an isotope;
@@ -339,8 +340,7 @@ G4VPhysicalVolume* DetectorConstruction::Construct()
   new G4PVPlacement(nullptr, posAl, logicAl, "Al", logicEnv, false, 0, checkOverlaps);
   
 
-  // Seting scoring volumes
-  //
+  // Setting scoring volumes
   scintScoringVolume = logicCsI_Tl;
   SiScoringVolume = logicSi;
   

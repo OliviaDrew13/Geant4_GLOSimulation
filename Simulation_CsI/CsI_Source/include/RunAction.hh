@@ -25,13 +25,15 @@ class RunAction : public G4UserRunAction
 
     void BeginOfRunAction(const G4Run*) override;
     void EndOfRunAction(const G4Run*) override;
-
+	
+	//defining the intake types for the functions for the accumulateables
     void AddEdep(G4double edep);
     void AddSiPhotonEdep(G4double SiPhotonEdep);
     void AddScintillationPhoton(G4double photons);
     void AddAbsorpedPhoton(G4double abphotons);
 
   private:
+    //Starting values for the accumulateables
     G4Accumulable<G4double> fEdep = 0.;
     G4Accumulable<G4double> fEdep2 = 0.;
     G4Accumulable<G4double> fSiPhotonEdep = 0.;

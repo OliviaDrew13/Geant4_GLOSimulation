@@ -24,6 +24,7 @@ class SteppingAction : public G4UserSteppingAction
 
   private:
     EventAction* fEventAction = nullptr;
+    //setting up the scoring volumes
     G4LogicalVolume* scintScoringVolume = nullptr;
     G4LogicalVolume* SiScoringVolume = nullptr;
 };

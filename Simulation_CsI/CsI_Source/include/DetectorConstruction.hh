@@ -19,11 +19,13 @@ class DetectorConstruction : public G4VUserDetectorConstruction
     ~DetectorConstruction() override = default;
 
     G4VPhysicalVolume* Construct() override;
-
-    G4LogicalVolume* GetScintScoringVolume() const { return scintScoringVolume; }
+	
+	// defining the scoring volumes from the logical volumes
+    G4LogicalVolume* GetScintScoringVolume() const { return scintScoringVolume; }//scintillator scoring volume
     G4LogicalVolume* GetSiScoringVolume() const { return SiScoringVolume; }
 
   protected:
+  //nullptrs
     G4LogicalVolume* scintScoringVolume = nullptr;
     G4LogicalVolume* SiScoringVolume = nullptr;
 };
