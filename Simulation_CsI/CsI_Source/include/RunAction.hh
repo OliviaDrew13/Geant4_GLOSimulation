@@ -27,12 +27,15 @@ class RunAction : public G4UserRunAction
     void EndOfRunAction(const G4Run*) override;
 
     void AddEdep(G4double edep);
+    void AddSiPhotonEdep(G4double SiPhotonEdep);
     void AddScintillationPhoton(G4double photons);
     void AddAbsorpedPhoton(G4double abphotons);
 
   private:
     G4Accumulable<G4double> fEdep = 0.;
     G4Accumulable<G4double> fEdep2 = 0.;
+    G4Accumulable<G4double> fSiPhotonEdep = 0.;
+    G4Accumulable<G4double> fSiPhotonEdep2 = 0.;
     G4Accumulable<G4int> fScintillationPhotons = 0.;
     G4Accumulable<G4int> fAbsorpedPhotons = 0.;
 };

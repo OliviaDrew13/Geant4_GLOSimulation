@@ -70,6 +70,7 @@ void SteppingAction::UserSteppingAction(const G4Step* step)
       analysisManager->AddNtupleRow(1);
       
       fEventAction->AddAbsorpedPhoton();
+      fEventAction->AddSiPhotonEdep(photonEnergy);
     }
   }
 }

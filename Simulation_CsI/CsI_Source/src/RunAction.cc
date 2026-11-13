@@ -39,6 +39,8 @@ RunAction::RunAction()
   G4AccumulableManager* accumulableManager = G4AccumulableManager::Instance();
   accumulableManager->Register(fEdep);
   accumulableManager->Register(fEdep2);
+  accumulableManager->Register(fSiPhotonEdep);
+  accumulableManager->Register(fSiPhotonEdep2);
 }
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
@@ -56,8 +58,9 @@ void RunAction::BeginOfRunAction(const G4Run* run)
   analysisManager->CreateNtuple("EventData", "CsI(Tl)");   //tuple 0
   analysisManager->CreateNtupleIColumn("Event"); //column0
   analysisManager->CreateNtupleDColumn("Energy Deposited in CsI by single Gamma (MeV)");  // column 1
-  analysisManager->CreateNtupleIColumn("Number of Produced Scintillation Photons"); //column 2
-  analysisManager->CreateNtupleIColumn("Number of Photons absorped by Si"); //column 3
+  analysisManager->CreateNtupleDColumn("Energy Deposited in Si by All Photons (MeV)");  // column 2
+  analysisManager->CreateNtupleIColumn("Number of Produced Scintillation Photons"); //column 3
+  analysisManager->CreateNtupleIColumn("Number of Photons absorped by Si"); //column 4
   analysisManager->FinishNtuple();
 
   // photon absorbtion data
@@ -154,6 +157,13 @@ void RunAction::AddEdep(G4double edep)
   fEdep += edep;
   fEdep2 += edep * edep;
 }
+
+void RunAction::AddSiPhotonEdep(G4double SiPhotonEdep)
+{
+  fSiPhotonEdep += SiPhotonEdep;
+  fSiPhotonEdep2 += SiPhotonEdep * SiPhotonEdep;
+}
+
 
 void RunAction::AddScintillationPhoton(G4double photons)
 {
