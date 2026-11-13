@@ -1475,11 +1475,18 @@ CMakeFiles/CsI_Sim.dir/src/EventAction.cc.o: /home/samuel/Documents/Dissertation
   /usr/include/asm-generic/errno.h \
   /usr/include/c++/13/algorithm \
   /usr/include/c++/13/array \
+  /usr/include/c++/13/atomic \
+  /usr/include/c++/13/backward/auto_ptr.h \
   /usr/include/c++/13/backward/binders.h \
   /usr/include/c++/13/bit \
   /usr/include/c++/13/bits/algorithmfwd.h \
+  /usr/include/c++/13/bits/align.h \
   /usr/include/c++/13/bits/alloc_traits.h \
+  /usr/include/c++/13/bits/allocated_ptr.h \
   /usr/include/c++/13/bits/allocator.h \
+  /usr/include/c++/13/bits/atomic_base.h \
+  /usr/include/c++/13/bits/atomic_futex.h \
+  /usr/include/c++/13/bits/atomic_lockfree_defines.h \
   /usr/include/c++/13/bits/basic_ios.h \
   /usr/include/c++/13/bits/basic_ios.tcc \
   /usr/include/c++/13/bits/basic_string.h \
@@ -1497,6 +1504,7 @@ CMakeFiles/CsI_Sim.dir/src/EventAction.cc.o: /home/samuel/Documents/Dissertation
   /usr/include/c++/13/bits/exception.h \
   /usr/include/c++/13/bits/exception_defines.h \
   /usr/include/c++/13/bits/exception_ptr.h \
+  /usr/include/c++/13/bits/fstream.tcc \
   /usr/include/c++/13/bits/functexcept.h \
   /usr/include/c++/13/bits/functional_hash.h \
   /usr/include/c++/13/bits/hash_bytes.h \
@@ -1529,11 +1537,15 @@ CMakeFiles/CsI_Sim.dir/src/EventAction.cc.o: /home/samuel/Documents/Dissertation
   /usr/include/c++/13/bits/range_access.h \
   /usr/include/c++/13/bits/refwrap.h \
   /usr/include/c++/13/bits/requires_hosted.h \
+  /usr/include/c++/13/bits/shared_ptr.h \
+  /usr/include/c++/13/bits/shared_ptr_atomic.h \
+  /usr/include/c++/13/bits/shared_ptr_base.h \
   /usr/include/c++/13/bits/specfun.h \
   /usr/include/c++/13/bits/sstream.tcc \
   /usr/include/c++/13/bits/std_abs.h \
   /usr/include/c++/13/bits/std_function.h \
   /usr/include/c++/13/bits/std_mutex.h \
+  /usr/include/c++/13/bits/std_thread.h \
   /usr/include/c++/13/bits/stl_algo.h \
   /usr/include/c++/13/bits/stl_algobase.h \
   /usr/include/c++/13/bits/stl_bvector.h \
@@ -1545,8 +1557,11 @@ CMakeFiles/CsI_Sim.dir/src/EventAction.cc.o: /home/samuel/Documents/Dissertation
   /usr/include/c++/13/bits/stl_iterator_base_types.h \
   /usr/include/c++/13/bits/stl_map.h \
   /usr/include/c++/13/bits/stl_multimap.h \
+  /usr/include/c++/13/bits/stl_multiset.h \
   /usr/include/c++/13/bits/stl_pair.h \
+  /usr/include/c++/13/bits/stl_raw_storage_iter.h \
   /usr/include/c++/13/bits/stl_relops.h \
+  /usr/include/c++/13/bits/stl_set.h \
   /usr/include/c++/13/bits/stl_tempbuf.h \
   /usr/include/c++/13/bits/stl_tree.h \
   /usr/include/c++/13/bits/stl_uninitialized.h \
@@ -1555,8 +1570,10 @@ CMakeFiles/CsI_Sim.dir/src/EventAction.cc.o: /home/samuel/Documents/Dissertation
   /usr/include/c++/13/bits/streambuf_iterator.h \
   /usr/include/c++/13/bits/string_view.tcc \
   /usr/include/c++/13/bits/stringfwd.h \
+  /usr/include/c++/13/bits/this_thread_sleep.h \
   /usr/include/c++/13/bits/uniform_int_dist.h \
   /usr/include/c++/13/bits/unique_lock.h \
+  /usr/include/c++/13/bits/unique_ptr.h \
   /usr/include/c++/13/bits/unordered_map.h \
   /usr/include/c++/13/bits/uses_allocator.h \
   /usr/include/c++/13/bits/uses_allocator_args.h \
@@ -1565,11 +1582,13 @@ CMakeFiles/CsI_Sim.dir/src/EventAction.cc.o: /home/samuel/Documents/Dissertation
   /usr/include/c++/13/bitset \
   /usr/include/c++/13/cctype \
   /usr/include/c++/13/cerrno \
+  /usr/include/c++/13/chrono \
   /usr/include/c++/13/climits \
   /usr/include/c++/13/clocale \
   /usr/include/c++/13/cmath \
   /usr/include/c++/13/compare \
   /usr/include/c++/13/complex \
+  /usr/include/c++/13/condition_variable \
   /usr/include/c++/13/cstddef \
   /usr/include/c++/13/cstdint \
   /usr/include/c++/13/cstdio \
@@ -1584,10 +1603,13 @@ CMakeFiles/CsI_Sim.dir/src/EventAction.cc.o: /home/samuel/Documents/Dissertation
   /usr/include/c++/13/ext/aligned_buffer.h \
   /usr/include/c++/13/ext/alloc_traits.h \
   /usr/include/c++/13/ext/atomicity.h \
+  /usr/include/c++/13/ext/concurrence.h \
   /usr/include/c++/13/ext/numeric_traits.h \
   /usr/include/c++/13/ext/string_conversions.h \
   /usr/include/c++/13/ext/type_traits.h \
+  /usr/include/c++/13/fstream \
   /usr/include/c++/13/functional \
+  /usr/include/c++/13/future \
   /usr/include/c++/13/initializer_list \
   /usr/include/c++/13/iomanip \
   /usr/include/c++/13/ios \
@@ -1597,19 +1619,23 @@ CMakeFiles/CsI_Sim.dir/src/EventAction.cc.o: /home/samuel/Documents/Dissertation
   /usr/include/c++/13/limits \
   /usr/include/c++/13/locale \
   /usr/include/c++/13/map \
+  /usr/include/c++/13/memory \
   /usr/include/c++/13/mutex \
   /usr/include/c++/13/new \
   /usr/include/c++/13/ostream \
   /usr/include/c++/13/pstl/execution_defs.h \
   /usr/include/c++/13/pstl/glue_algorithm_defs.h \
+  /usr/include/c++/13/pstl/glue_memory_defs.h \
   /usr/include/c++/13/pstl/pstl_config.h \
   /usr/include/c++/13/ratio \
+  /usr/include/c++/13/set \
   /usr/include/c++/13/sstream \
   /usr/include/c++/13/stdexcept \
   /usr/include/c++/13/streambuf \
   /usr/include/c++/13/string \
   /usr/include/c++/13/string_view \
   /usr/include/c++/13/system_error \
+  /usr/include/c++/13/thread \
   /usr/include/c++/13/tr1/bessel_function.tcc \
   /usr/include/c++/13/tr1/beta_function.tcc \
   /usr/include/c++/13/tr1/ell_integral.tcc \
@@ -1727,8 +1753,10 @@ CMakeFiles/CsI_Sim.dir/src/EventAction.cc.o: /home/samuel/Documents/Dissertation
   /usr/include/x86_64-linux-gnu/bits/wordsize.h \
   /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/atomic_word.h \
+  /usr/include/x86_64-linux-gnu/c++/13/bits/basic_file.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/c++allocator.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
+  /usr/include/x86_64-linux-gnu/c++/13/bits/c++io.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/c++locale.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/cpu_defines.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/ctype_base.h \
@@ -1750,26 +1778,111 @@ CMakeFiles/CsI_Sim.dir/src/EventAction.cc.o: /home/samuel/Documents/Dissertation
   /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h \
   /usr/lib/gcc/x86_64-linux-gnu/13/include/stdint.h \
   /usr/lib/gcc/x86_64-linux-gnu/13/include/syslimits.h \
+  /usr/local/include/Geant4/CLHEP/Utility/defs.h \
+  /usr/local/include/Geant4/CLHEP/Vector/ThreeVector.h \
+  /usr/local/include/Geant4/CLHEP/Vector/ThreeVector.icc \
   /usr/local/include/Geant4/G4AccType.hh \
   /usr/local/include/Geant4/G4AccValue.hh \
   /usr/local/include/Geant4/G4AccValue.icc \
   /usr/local/include/Geant4/G4Accumulable.hh \
+  /usr/local/include/Geant4/G4Allocator.hh \
+  /usr/local/include/Geant4/G4AllocatorPool.hh \
+  /usr/local/include/Geant4/G4AnalysisManager.hh \
+  /usr/local/include/Geant4/G4AnalysisManagerState.hh \
+  /usr/local/include/Geant4/G4AnalysisUtilities.hh \
+  /usr/local/include/Geant4/G4AnalysisVerbose.hh \
+  /usr/local/include/Geant4/G4ApplicationState.hh \
+  /usr/local/include/Geant4/G4AutoLock.hh \
+  /usr/local/include/Geant4/G4BaseAnalysisManager.hh \
+  /usr/local/include/Geant4/G4BaseFileManager.hh \
+  /usr/local/include/Geant4/G4BinScheme.hh \
+  /usr/local/include/Geant4/G4DCofThisEvent.hh \
   /usr/local/include/Geant4/G4EnvironmentUtils.hh \
+  /usr/local/include/Geant4/G4Event.hh \
   /usr/local/include/Geant4/G4Exception.hh \
   /usr/local/include/Geant4/G4ExceptionSeverity.hh \
+  /usr/local/include/Geant4/G4Fcn.hh \
+  /usr/local/include/Geant4/G4GenericAnalysisManager.hh \
+  /usr/local/include/Geant4/G4GenericAnalysisManager.icc \
+  /usr/local/include/Geant4/G4GenericFileManager.hh \
+  /usr/local/include/Geant4/G4GenericFileManager.icc \
   /usr/local/include/Geant4/G4GlobalConfig.hh \
+  /usr/local/include/Geant4/G4HCofThisEvent.hh \
+  /usr/local/include/Geant4/G4HnInformation.hh \
+  /usr/local/include/Geant4/G4HnManager.hh \
   /usr/local/include/Geant4/G4MergeMode.hh \
+  /usr/local/include/Geant4/G4NtupleBookingManager.hh \
+  /usr/local/include/Geant4/G4NtupleBookingManager.icc \
+  /usr/local/include/Geant4/G4PrimaryParticle.hh \
+  /usr/local/include/Geant4/G4PrimaryVertex.hh \
   /usr/local/include/Geant4/G4String.hh \
   /usr/local/include/Geant4/G4String.icc \
+  /usr/local/include/Geant4/G4TH1ToolsManager.hh \
+  /usr/local/include/Geant4/G4TH2ToolsManager.hh \
+  /usr/local/include/Geant4/G4TH3ToolsManager.hh \
+  /usr/local/include/Geant4/G4THnManager.hh \
+  /usr/local/include/Geant4/G4THnManager.icc \
+  /usr/local/include/Geant4/G4THnMessenger.hh \
+  /usr/local/include/Geant4/G4THnMessenger.icc \
+  /usr/local/include/Geant4/G4THnToolsManager.hh \
+  /usr/local/include/Geant4/G4THnToolsManager.icc \
+  /usr/local/include/Geant4/G4TP1ToolsManager.hh \
+  /usr/local/include/Geant4/G4TP2ToolsManager.hh \
+  /usr/local/include/Geant4/G4Threading.hh \
+  /usr/local/include/Geant4/G4ThreeVector.hh \
+  /usr/local/include/Geant4/G4Tokenizer.hh \
+  /usr/local/include/Geant4/G4ToolsAnalysisManager.hh \
+  /usr/local/include/Geant4/G4ToolsAnalysisManager.icc \
+  /usr/local/include/Geant4/G4TrajectoryContainer.hh \
   /usr/local/include/Geant4/G4Types.hh \
+  /usr/local/include/Geant4/G4UIcommand.hh \
+  /usr/local/include/Geant4/G4UIdirectory.hh \
+  /usr/local/include/Geant4/G4UImessenger.hh \
+  /usr/local/include/Geant4/G4UIparameter.hh \
   /usr/local/include/Geant4/G4UserEventAction.hh \
   /usr/local/include/Geant4/G4UserRunAction.hh \
   /usr/local/include/Geant4/G4VAccumulable.hh \
   /usr/local/include/Geant4/G4VAccumulable.icc \
+  /usr/local/include/Geant4/G4VAnalysisManager.hh \
+  /usr/local/include/Geant4/G4VAnalysisManager.icc \
+  /usr/local/include/Geant4/G4VDigiCollection.hh \
+  /usr/local/include/Geant4/G4VFileManager.hh \
+  /usr/local/include/Geant4/G4VHitsCollection.hh \
+  /usr/local/include/Geant4/G4VNtupleManager.hh \
+  /usr/local/include/Geant4/G4VTBaseHnManager.hh \
+  /usr/local/include/Geant4/G4VTHnFileManager.hh \
+  /usr/local/include/Geant4/G4VTrajectory.hh \
+  /usr/local/include/Geant4/G4VUserEventInformation.hh \
   /usr/local/include/Geant4/G4ios.hh \
+  /usr/local/include/Geant4/evtdefs.hh \
   /usr/local/include/Geant4/globals.hh \
+  /usr/local/include/Geant4/pwdefs.hh \
   /usr/local/include/Geant4/templates.hh \
-  /usr/local/include/Geant4/tls.hh
+  /usr/local/include/Geant4/tls.hh \
+  /usr/local/include/Geant4/tools/cid \
+  /usr/local/include/Geant4/tools/cids \
+  /usr/local/include/Geant4/tools/eqT \
+  /usr/local/include/Geant4/tools/forit \
+  /usr/local/include/Geant4/tools/histo/axes \
+  /usr/local/include/Geant4/tools/histo/axis \
+  /usr/local/include/Geant4/tools/histo/b1 \
+  /usr/local/include/Geant4/tools/histo/b2 \
+  /usr/local/include/Geant4/tools/histo/b3 \
+  /usr/local/include/Geant4/tools/histo/base_histo \
+  /usr/local/include/Geant4/tools/histo/h1 \
+  /usr/local/include/Geant4/tools/histo/h1d \
+  /usr/local/include/Geant4/tools/histo/h2 \
+  /usr/local/include/Geant4/tools/histo/h2d \
+  /usr/local/include/Geant4/tools/histo/h3 \
+  /usr/local/include/Geant4/tools/histo/h3d \
+  /usr/local/include/Geant4/tools/histo/histo_data \
+  /usr/local/include/Geant4/tools/histo/p1 \
+  /usr/local/include/Geant4/tools/histo/p1d \
+  /usr/local/include/Geant4/tools/histo/p2 \
+  /usr/local/include/Geant4/tools/histo/p2d \
+  /usr/local/include/Geant4/tools/histo/profile_data \
+  /usr/local/include/Geant4/tools/ntuple_booking \
+  /usr/local/include/Geant4/tools/typedefs
 
 CMakeFiles/CsI_Sim.dir/src/PrimaryGeneratorAction.cc.o: /home/samuel/Documents/Dissertation/Geant4_GLOSimulation/Simulation_CsI/CsI_Source/src/PrimaryGeneratorAction.cc \
   /home/samuel/Documents/Dissertation/Geant4_GLOSimulation/Simulation_CsI/CsI_Source/include/PrimaryGeneratorAction.hh \
@@ -2609,10 +2722,17 @@ CMakeFiles/CsI_Sim.dir/src/RunAction.cc.o: /home/samuel/Documents/Dissertation/G
   /usr/local/include/Geant4/G4AffineTransform.icc \
   /usr/local/include/Geant4/G4Allocator.hh \
   /usr/local/include/Geant4/G4AllocatorPool.hh \
+  /usr/local/include/Geant4/G4AnalysisManager.hh \
+  /usr/local/include/Geant4/G4AnalysisManagerState.hh \
+  /usr/local/include/Geant4/G4AnalysisUtilities.hh \
+  /usr/local/include/Geant4/G4AnalysisVerbose.hh \
   /usr/local/include/Geant4/G4ApplicationState.hh \
   /usr/local/include/Geant4/G4AutoLock.hh \
   /usr/local/include/Geant4/G4AuxiliaryNavServices.hh \
   /usr/local/include/Geant4/G4AuxiliaryNavServices.icc \
+  /usr/local/include/Geant4/G4BaseAnalysisManager.hh \
+  /usr/local/include/Geant4/G4BaseFileManager.hh \
+  /usr/local/include/Geant4/G4BinScheme.hh \
   /usr/local/include/Geant4/G4BlockingList.hh \
   /usr/local/include/Geant4/G4BlockingList.icc \
   /usr/local/include/Geant4/G4ClassificationOfNewTrack.hh \
@@ -2631,11 +2751,18 @@ CMakeFiles/CsI_Sim.dir/src/RunAction.cc.o: /home/samuel/Documents/Dissertation/G
   /usr/local/include/Geant4/G4EventManager.hh \
   /usr/local/include/Geant4/G4Exception.hh \
   /usr/local/include/Geant4/G4ExceptionSeverity.hh \
+  /usr/local/include/Geant4/G4Fcn.hh \
   /usr/local/include/Geant4/G4ForceCondition.hh \
   /usr/local/include/Geant4/G4GPILSelection.hh \
+  /usr/local/include/Geant4/G4GenericAnalysisManager.hh \
+  /usr/local/include/Geant4/G4GenericAnalysisManager.icc \
+  /usr/local/include/Geant4/G4GenericFileManager.hh \
+  /usr/local/include/Geant4/G4GenericFileManager.icc \
   /usr/local/include/Geant4/G4GeomSplitter.hh \
   /usr/local/include/Geant4/G4GlobalConfig.hh \
   /usr/local/include/Geant4/G4HCofThisEvent.hh \
+  /usr/local/include/Geant4/G4HnInformation.hh \
+  /usr/local/include/Geant4/G4HnManager.hh \
   /usr/local/include/Geant4/G4IEEE754.hh \
   /usr/local/include/Geant4/G4IonisParamElm.hh \
   /usr/local/include/Geant4/G4IonisParamMat.hh \
@@ -2664,6 +2791,9 @@ CMakeFiles/CsI_Sim.dir/src/RunAction.cc.o: /home/samuel/Documents/Dissertation/G
   /usr/local/include/Geant4/G4NoProcess.hh \
   /usr/local/include/Geant4/G4NormalNavigation.hh \
   /usr/local/include/Geant4/G4NormalNavigation.icc \
+  /usr/local/include/Geant4/G4NtupleBookingManager.hh \
+  /usr/local/include/Geant4/G4NtupleBookingManager.icc \
+  /usr/local/include/Geant4/G4OpticalPhoton.hh \
   /usr/local/include/Geant4/G4OrderedTable.hh \
   /usr/local/include/Geant4/G4PDefManager.hh \
   /usr/local/include/Geant4/G4ParameterisedNavigation.hh \
@@ -2724,8 +2854,22 @@ CMakeFiles/CsI_Sim.dir/src/RunAction.cc.o: /home/samuel/Documents/Dissertation/G
   /usr/local/include/Geant4/G4SubEvent.hh \
   /usr/local/include/Geant4/G4SubEventTrackStack.hh \
   /usr/local/include/Geant4/G4SystemOfUnits.hh \
+  /usr/local/include/Geant4/G4TH1ToolsManager.hh \
+  /usr/local/include/Geant4/G4TH2ToolsManager.hh \
+  /usr/local/include/Geant4/G4TH3ToolsManager.hh \
+  /usr/local/include/Geant4/G4THnManager.hh \
+  /usr/local/include/Geant4/G4THnManager.icc \
+  /usr/local/include/Geant4/G4THnMessenger.hh \
+  /usr/local/include/Geant4/G4THnMessenger.icc \
+  /usr/local/include/Geant4/G4THnToolsManager.hh \
+  /usr/local/include/Geant4/G4THnToolsManager.icc \
+  /usr/local/include/Geant4/G4TP1ToolsManager.hh \
+  /usr/local/include/Geant4/G4TP2ToolsManager.hh \
   /usr/local/include/Geant4/G4Threading.hh \
   /usr/local/include/Geant4/G4ThreeVector.hh \
+  /usr/local/include/Geant4/G4Tokenizer.hh \
+  /usr/local/include/Geant4/G4ToolsAnalysisManager.hh \
+  /usr/local/include/Geant4/G4ToolsAnalysisManager.icc \
   /usr/local/include/Geant4/G4TouchableHandle.hh \
   /usr/local/include/Geant4/G4TouchableHistory.hh \
   /usr/local/include/Geant4/G4TouchableHistory.icc \
@@ -2751,10 +2895,14 @@ CMakeFiles/CsI_Sim.dir/src/RunAction.cc.o: /home/samuel/Documents/Dissertation/G
   /usr/local/include/Geant4/G4UserTrackingAction.hh \
   /usr/local/include/Geant4/G4VAccumulable.hh \
   /usr/local/include/Geant4/G4VAccumulable.icc \
+  /usr/local/include/Geant4/G4VAnalysisManager.hh \
+  /usr/local/include/Geant4/G4VAnalysisManager.icc \
   /usr/local/include/Geant4/G4VDigiCollection.hh \
   /usr/local/include/Geant4/G4VExternalNavigation.hh \
+  /usr/local/include/Geant4/G4VFileManager.hh \
   /usr/local/include/Geant4/G4VHitsCollection.hh \
   /usr/local/include/Geant4/G4VNavigation.hh \
+  /usr/local/include/Geant4/G4VNtupleManager.hh \
   /usr/local/include/Geant4/G4VPVParameterisation.hh \
   /usr/local/include/Geant4/G4VParticleChange.hh \
   /usr/local/include/Geant4/G4VParticleChange.icc \
@@ -2765,6 +2913,8 @@ CMakeFiles/CsI_Sim.dir/src/RunAction.cc.o: /home/samuel/Documents/Dissertation/G
   /usr/local/include/Geant4/G4VSolid.hh \
   /usr/local/include/Geant4/G4VSolid.icc \
   /usr/local/include/Geant4/G4VSteppingVerbose.hh \
+  /usr/local/include/Geant4/G4VTBaseHnManager.hh \
+  /usr/local/include/Geant4/G4VTHnFileManager.hh \
   /usr/local/include/Geant4/G4VTouchable.hh \
   /usr/local/include/Geant4/G4VTrajectory.hh \
   /usr/local/include/Geant4/G4VUserDetectorConstruction.hh \
@@ -2784,6 +2934,30 @@ CMakeFiles/CsI_Sim.dir/src/RunAction.cc.o: /home/samuel/Documents/Dissertation/G
   /usr/local/include/Geant4/rundefs.hh \
   /usr/local/include/Geant4/templates.hh \
   /usr/local/include/Geant4/tls.hh \
+  /usr/local/include/Geant4/tools/cid \
+  /usr/local/include/Geant4/tools/cids \
+  /usr/local/include/Geant4/tools/eqT \
+  /usr/local/include/Geant4/tools/forit \
+  /usr/local/include/Geant4/tools/histo/axes \
+  /usr/local/include/Geant4/tools/histo/axis \
+  /usr/local/include/Geant4/tools/histo/b1 \
+  /usr/local/include/Geant4/tools/histo/b2 \
+  /usr/local/include/Geant4/tools/histo/b3 \
+  /usr/local/include/Geant4/tools/histo/base_histo \
+  /usr/local/include/Geant4/tools/histo/h1 \
+  /usr/local/include/Geant4/tools/histo/h1d \
+  /usr/local/include/Geant4/tools/histo/h2 \
+  /usr/local/include/Geant4/tools/histo/h2d \
+  /usr/local/include/Geant4/tools/histo/h3 \
+  /usr/local/include/Geant4/tools/histo/h3d \
+  /usr/local/include/Geant4/tools/histo/histo_data \
+  /usr/local/include/Geant4/tools/histo/p1 \
+  /usr/local/include/Geant4/tools/histo/p1d \
+  /usr/local/include/Geant4/tools/histo/p2 \
+  /usr/local/include/Geant4/tools/histo/p2d \
+  /usr/local/include/Geant4/tools/histo/profile_data \
+  /usr/local/include/Geant4/tools/ntuple_booking \
+  /usr/local/include/Geant4/tools/typedefs \
   /usr/local/include/Geant4/trkdefs.hh \
   /usr/local/include/Geant4/trkgdefs.hh
 
@@ -2881,6 +3055,7 @@ CMakeFiles/CsI_Sim.dir/src/SteppingAction.cc.o: /home/samuel/Documents/Dissertat
   /usr/include/c++/13/bits/stl_multiset.h \
   /usr/include/c++/13/bits/stl_pair.h \
   /usr/include/c++/13/bits/stl_raw_storage_iter.h \
+  /usr/include/c++/13/bits/stl_relops.h \
   /usr/include/c++/13/bits/stl_set.h \
   /usr/include/c++/13/bits/stl_tempbuf.h \
   /usr/include/c++/13/bits/stl_tree.h \
@@ -2970,6 +3145,7 @@ CMakeFiles/CsI_Sim.dir/src/SteppingAction.cc.o: /home/samuel/Documents/Dissertat
   /usr/include/c++/13/tuple \
   /usr/include/c++/13/type_traits \
   /usr/include/c++/13/typeinfo \
+  /usr/include/c++/13/utility \
   /usr/include/c++/13/vector \
   /usr/include/ctype.h \
   /usr/include/endian.h \
@@ -3170,10 +3346,17 @@ CMakeFiles/CsI_Sim.dir/src/SteppingAction.cc.o: /home/samuel/Documents/Dissertat
   /usr/local/include/Geant4/G4AffineTransform.icc \
   /usr/local/include/Geant4/G4Allocator.hh \
   /usr/local/include/Geant4/G4AllocatorPool.hh \
+  /usr/local/include/Geant4/G4AnalysisManager.hh \
+  /usr/local/include/Geant4/G4AnalysisManagerState.hh \
+  /usr/local/include/Geant4/G4AnalysisUtilities.hh \
+  /usr/local/include/Geant4/G4AnalysisVerbose.hh \
   /usr/local/include/Geant4/G4ApplicationState.hh \
   /usr/local/include/Geant4/G4AutoLock.hh \
   /usr/local/include/Geant4/G4AuxiliaryNavServices.hh \
   /usr/local/include/Geant4/G4AuxiliaryNavServices.icc \
+  /usr/local/include/Geant4/G4BaseAnalysisManager.hh \
+  /usr/local/include/Geant4/G4BaseFileManager.hh \
+  /usr/local/include/Geant4/G4BinScheme.hh \
   /usr/local/include/Geant4/G4BlockingList.hh \
   /usr/local/include/Geant4/G4BlockingList.icc \
   /usr/local/include/Geant4/G4ClassificationOfNewTrack.hh \
@@ -3192,11 +3375,18 @@ CMakeFiles/CsI_Sim.dir/src/SteppingAction.cc.o: /home/samuel/Documents/Dissertat
   /usr/local/include/Geant4/G4EventManager.hh \
   /usr/local/include/Geant4/G4Exception.hh \
   /usr/local/include/Geant4/G4ExceptionSeverity.hh \
+  /usr/local/include/Geant4/G4Fcn.hh \
   /usr/local/include/Geant4/G4ForceCondition.hh \
   /usr/local/include/Geant4/G4GPILSelection.hh \
+  /usr/local/include/Geant4/G4GenericAnalysisManager.hh \
+  /usr/local/include/Geant4/G4GenericAnalysisManager.icc \
+  /usr/local/include/Geant4/G4GenericFileManager.hh \
+  /usr/local/include/Geant4/G4GenericFileManager.icc \
   /usr/local/include/Geant4/G4GeomSplitter.hh \
   /usr/local/include/Geant4/G4GlobalConfig.hh \
   /usr/local/include/Geant4/G4HCofThisEvent.hh \
+  /usr/local/include/Geant4/G4HnInformation.hh \
+  /usr/local/include/Geant4/G4HnManager.hh \
   /usr/local/include/Geant4/G4IEEE754.hh \
   /usr/local/include/Geant4/G4IonisParamElm.hh \
   /usr/local/include/Geant4/G4IonisParamMat.hh \
@@ -3224,6 +3414,9 @@ CMakeFiles/CsI_Sim.dir/src/SteppingAction.cc.o: /home/samuel/Documents/Dissertat
   /usr/local/include/Geant4/G4NoProcess.hh \
   /usr/local/include/Geant4/G4NormalNavigation.hh \
   /usr/local/include/Geant4/G4NormalNavigation.icc \
+  /usr/local/include/Geant4/G4NtupleBookingManager.hh \
+  /usr/local/include/Geant4/G4NtupleBookingManager.icc \
+  /usr/local/include/Geant4/G4OpticalPhoton.hh \
   /usr/local/include/Geant4/G4OrderedTable.hh \
   /usr/local/include/Geant4/G4PDefManager.hh \
   /usr/local/include/Geant4/G4ParameterisedNavigation.hh \
@@ -3281,8 +3474,23 @@ CMakeFiles/CsI_Sim.dir/src/SteppingAction.cc.o: /home/samuel/Documents/Dissertat
   /usr/local/include/Geant4/G4String.icc \
   /usr/local/include/Geant4/G4SubEvent.hh \
   /usr/local/include/Geant4/G4SubEventTrackStack.hh \
+  /usr/local/include/Geant4/G4SystemOfUnits.hh \
+  /usr/local/include/Geant4/G4TH1ToolsManager.hh \
+  /usr/local/include/Geant4/G4TH2ToolsManager.hh \
+  /usr/local/include/Geant4/G4TH3ToolsManager.hh \
+  /usr/local/include/Geant4/G4THnManager.hh \
+  /usr/local/include/Geant4/G4THnManager.icc \
+  /usr/local/include/Geant4/G4THnMessenger.hh \
+  /usr/local/include/Geant4/G4THnMessenger.icc \
+  /usr/local/include/Geant4/G4THnToolsManager.hh \
+  /usr/local/include/Geant4/G4THnToolsManager.icc \
+  /usr/local/include/Geant4/G4TP1ToolsManager.hh \
+  /usr/local/include/Geant4/G4TP2ToolsManager.hh \
   /usr/local/include/Geant4/G4Threading.hh \
   /usr/local/include/Geant4/G4ThreeVector.hh \
+  /usr/local/include/Geant4/G4Tokenizer.hh \
+  /usr/local/include/Geant4/G4ToolsAnalysisManager.hh \
+  /usr/local/include/Geant4/G4ToolsAnalysisManager.icc \
   /usr/local/include/Geant4/G4TouchableHandle.hh \
   /usr/local/include/Geant4/G4TouchableHistory.hh \
   /usr/local/include/Geant4/G4TouchableHistory.icc \
@@ -3304,10 +3512,14 @@ CMakeFiles/CsI_Sim.dir/src/SteppingAction.cc.o: /home/samuel/Documents/Dissertat
   /usr/local/include/Geant4/G4UserStackingAction.hh \
   /usr/local/include/Geant4/G4UserSteppingAction.hh \
   /usr/local/include/Geant4/G4UserTrackingAction.hh \
+  /usr/local/include/Geant4/G4VAnalysisManager.hh \
+  /usr/local/include/Geant4/G4VAnalysisManager.icc \
   /usr/local/include/Geant4/G4VDigiCollection.hh \
   /usr/local/include/Geant4/G4VExternalNavigation.hh \
+  /usr/local/include/Geant4/G4VFileManager.hh \
   /usr/local/include/Geant4/G4VHitsCollection.hh \
   /usr/local/include/Geant4/G4VNavigation.hh \
+  /usr/local/include/Geant4/G4VNtupleManager.hh \
   /usr/local/include/Geant4/G4VPVParameterisation.hh \
   /usr/local/include/Geant4/G4VParticleChange.hh \
   /usr/local/include/Geant4/G4VParticleChange.icc \
@@ -3317,6 +3529,8 @@ CMakeFiles/CsI_Sim.dir/src/SteppingAction.cc.o: /home/samuel/Documents/Dissertat
   /usr/local/include/Geant4/G4VSolid.hh \
   /usr/local/include/Geant4/G4VSolid.icc \
   /usr/local/include/Geant4/G4VSteppingVerbose.hh \
+  /usr/local/include/Geant4/G4VTBaseHnManager.hh \
+  /usr/local/include/Geant4/G4VTHnFileManager.hh \
   /usr/local/include/Geant4/G4VTouchable.hh \
   /usr/local/include/Geant4/G4VTrajectory.hh \
   /usr/local/include/Geant4/G4VUserDetectorConstruction.hh \
@@ -3335,6 +3549,30 @@ CMakeFiles/CsI_Sim.dir/src/SteppingAction.cc.o: /home/samuel/Documents/Dissertat
   /usr/local/include/Geant4/rundefs.hh \
   /usr/local/include/Geant4/templates.hh \
   /usr/local/include/Geant4/tls.hh \
+  /usr/local/include/Geant4/tools/cid \
+  /usr/local/include/Geant4/tools/cids \
+  /usr/local/include/Geant4/tools/eqT \
+  /usr/local/include/Geant4/tools/forit \
+  /usr/local/include/Geant4/tools/histo/axes \
+  /usr/local/include/Geant4/tools/histo/axis \
+  /usr/local/include/Geant4/tools/histo/b1 \
+  /usr/local/include/Geant4/tools/histo/b2 \
+  /usr/local/include/Geant4/tools/histo/b3 \
+  /usr/local/include/Geant4/tools/histo/base_histo \
+  /usr/local/include/Geant4/tools/histo/h1 \
+  /usr/local/include/Geant4/tools/histo/h1d \
+  /usr/local/include/Geant4/tools/histo/h2 \
+  /usr/local/include/Geant4/tools/histo/h2d \
+  /usr/local/include/Geant4/tools/histo/h3 \
+  /usr/local/include/Geant4/tools/histo/h3d \
+  /usr/local/include/Geant4/tools/histo/histo_data \
+  /usr/local/include/Geant4/tools/histo/p1 \
+  /usr/local/include/Geant4/tools/histo/p1d \
+  /usr/local/include/Geant4/tools/histo/p2 \
+  /usr/local/include/Geant4/tools/histo/p2d \
+  /usr/local/include/Geant4/tools/histo/profile_data \
+  /usr/local/include/Geant4/tools/ntuple_booking \
+  /usr/local/include/Geant4/tools/typedefs \
   /usr/local/include/Geant4/trkdefs.hh \
   /usr/local/include/Geant4/trkgdefs.hh
 
@@ -3342,6 +3580,8 @@ CMakeFiles/CsI_Sim.dir/src/SteppingAction.cc.o: /home/samuel/Documents/Dissertat
 /home/samuel/Documents/Dissertation/Geant4_GLOSimulation/Simulation_CsI/CsI_Source/src/SteppingAction.cc:
 
 /usr/local/include/Geant4/G4Run.hh:
+
+/usr/local/include/Geant4/G4OpticalPhoton.hh:
 
 /usr/local/include/Geant4/G4AccumulableManager.hh:
 
@@ -3356,6 +3596,62 @@ CMakeFiles/CsI_Sim.dir/src/SteppingAction.cc.o: /home/samuel/Documents/Dissertat
 /usr/local/include/Geant4/G4VPrimaryGenerator.hh:
 
 /usr/local/include/Geant4/G4ParticleGun.hh:
+
+/usr/local/include/Geant4/tools/typedefs:
+
+/usr/local/include/Geant4/tools/histo/p1:
+
+/usr/local/include/Geant4/tools/histo/histo_data:
+
+/usr/local/include/Geant4/tools/histo/h3d:
+
+/usr/local/include/Geant4/tools/histo/p2:
+
+/usr/local/include/Geant4/tools/histo/h3:
+
+/usr/local/include/Geant4/tools/histo/h2:
+
+/usr/local/include/Geant4/tools/histo/h1:
+
+/usr/local/include/Geant4/tools/histo/axes:
+
+/usr/local/include/Geant4/tools/forit:
+
+/usr/local/include/Geant4/tools/eqT:
+
+/usr/local/include/Geant4/tools/histo/b2:
+
+/usr/local/include/Geant4/tools/cids:
+
+/usr/local/include/Geant4/tools/cid:
+
+/usr/local/include/Geant4/G4VTHnFileManager.hh:
+
+/usr/local/include/Geant4/G4VFileManager.hh:
+
+/usr/local/include/Geant4/G4VAnalysisManager.hh:
+
+/usr/local/include/Geant4/G4ToolsAnalysisManager.hh:
+
+/usr/local/include/Geant4/G4TP2ToolsManager.hh:
+
+/usr/local/include/Geant4/G4THnToolsManager.hh:
+
+/usr/local/include/Geant4/G4THnMessenger.hh:
+
+/usr/local/include/Geant4/G4TH3ToolsManager.hh:
+
+/usr/local/include/Geant4/G4NtupleBookingManager.hh:
+
+/usr/local/include/Geant4/G4HnInformation.hh:
+
+/usr/local/include/Geant4/G4GenericFileManager.icc:
+
+/usr/local/include/Geant4/G4GenericFileManager.hh:
+
+/usr/local/include/Geant4/G4BinScheme.hh:
+
+/usr/local/include/Geant4/G4AnalysisUtilities.hh:
 
 /usr/local/include/Geant4/G4UnitsTable.icc:
 
@@ -3375,9 +3671,13 @@ CMakeFiles/CsI_Sim.dir/src/SteppingAction.cc.o: /home/samuel/Documents/Dissertat
 
 /usr/local/include/Geant4/G4Accumulable.hh:
 
+/usr/local/include/Geant4/tools/histo/profile_data:
+
 /usr/local/include/Geant4/G4AccValue.hh:
 
 /usr/local/include/Geant4/G4AccType.hh:
+
+/usr/local/include/Geant4/tools/histo/p1d:
 
 /home/samuel/Documents/Dissertation/Geant4_GLOSimulation/Simulation_CsI/CsI_Source/include/SteppingAction.hh:
 
@@ -3386,6 +3686,8 @@ CMakeFiles/CsI_Sim.dir/src/SteppingAction.cc.o: /home/samuel/Documents/Dissertat
 /usr/local/include/Geant4/pwdefs.hh:
 
 /usr/local/include/Geant4/icomsdefs.hh:
+
+/usr/local/include/Geant4/G4Tokenizer.hh:
 
 /usr/local/include/Geant4/graphics_reps_defs.hh:
 
@@ -3463,11 +3765,15 @@ CMakeFiles/CsI_Sim.dir/src/SteppingAction.cc.o: /home/samuel/Documents/Dissertat
 
 /usr/local/include/Geant4/G4VProcess.hh:
 
+/usr/local/include/Geant4/G4THnToolsManager.icc:
+
 /usr/local/include/Geant4/G4VPhysicsConstructor.hh:
 
 /usr/local/include/Geant4/G4VPhysicalVolume.icc:
 
 /usr/local/include/Geant4/G4VParticleChange.hh:
+
+/usr/local/include/Geant4/G4TH2ToolsManager.hh:
 
 /usr/local/include/Geant4/G4VNavigation.hh:
 
@@ -3531,6 +3837,8 @@ CMakeFiles/CsI_Sim.dir/src/SteppingAction.cc.o: /home/samuel/Documents/Dissertat
 
 /usr/local/include/Geant4/G4TrackVector.hh:
 
+/usr/local/include/Geant4/G4TH1ToolsManager.hh:
+
 /usr/local/include/Geant4/G4NistElementBuilder.hh:
 
 /usr/local/include/Geant4/G4TrackStatus.hh:
@@ -3561,6 +3869,8 @@ CMakeFiles/CsI_Sim.dir/src/SteppingAction.cc.o: /home/samuel/Documents/Dissertat
 
 /usr/local/include/Geant4/G4ThreadPool.hh:
 
+/usr/local/include/Geant4/G4BaseFileManager.hh:
+
 /usr/local/include/Geant4/G4VTouchable.hh:
 
 /usr/local/include/Geant4/G4ThreadLocalSingleton.hh:
@@ -3579,6 +3889,8 @@ CMakeFiles/CsI_Sim.dir/src/SteppingAction.cc.o: /home/samuel/Documents/Dissertat
 
 /usr/local/include/Geant4/G4String.icc:
 
+/usr/local/include/Geant4/G4THnManager.icc:
+
 /usr/local/include/Geant4/G4VUserPhysicsList.hh:
 
 /usr/local/include/Geant4/G4String.hh:
@@ -3593,7 +3905,11 @@ CMakeFiles/CsI_Sim.dir/src/SteppingAction.cc.o: /home/samuel/Documents/Dissertat
 
 /usr/local/include/Geant4/G4AccUnorderedMap.icc:
 
+/usr/local/include/Geant4/G4TP1ToolsManager.hh:
+
 /usr/local/include/Geant4/G4Sphere.icc:
+
+/usr/local/include/Geant4/tools/ntuple_booking:
 
 /usr/local/include/Geant4/G4SmartVoxelProxy.icc:
 
@@ -3635,6 +3951,8 @@ CMakeFiles/CsI_Sim.dir/src/SteppingAction.cc.o: /home/samuel/Documents/Dissertat
 
 /usr/local/include/Geant4/G4Region.hh:
 
+/usr/local/include/Geant4/G4AnalysisManager.hh:
+
 /usr/local/include/Geant4/G4ReferenceCountedHandle.hh:
 
 /usr/local/include/Geant4/G4RayTracerQt.hh:
@@ -3660,6 +3978,8 @@ CMakeFiles/CsI_Sim.dir/src/SteppingAction.cc.o: /home/samuel/Documents/Dissertat
 /usr/include/x86_64-linux-gnu/bits/local_lim.h:
 
 /usr/local/include/Geant4/CLHEP/Geometry/Vector3D.h:
+
+/usr/local/include/Geant4/G4NtupleBookingManager.icc:
 
 /usr/include/x86_64-linux-gnu/bits/iscanonical.h:
 
@@ -3706,6 +4026,8 @@ CMakeFiles/CsI_Sim.dir/src/SteppingAction.cc.o: /home/samuel/Documents/Dissertat
 /usr/include/c++/13/future:
 
 /usr/include/ctype.h:
+
+/usr/local/include/Geant4/G4GenericAnalysisManager.icc:
 
 /usr/include/c++/13/vector:
 
@@ -3781,9 +4103,13 @@ CMakeFiles/CsI_Sim.dir/src/SteppingAction.cc.o: /home/samuel/Documents/Dissertat
 
 /usr/include/c++/13/pstl/pstl_config.h:
 
+/usr/local/include/Geant4/tools/histo/axis:
+
 /usr/local/include/Geant4/G4PhysicsListOrderingParameter.hh:
 
 /usr/include/c++/13/bits/regex_automaton.h:
+
+/usr/local/include/Geant4/G4VNtupleManager.hh:
 
 /usr/include/strings.h:
 
@@ -3821,6 +4147,8 @@ CMakeFiles/CsI_Sim.dir/src/SteppingAction.cc.o: /home/samuel/Documents/Dissertat
 
 /usr/local/include/Geant4/CLHEP/Vector/RotationY.icc:
 
+/usr/local/include/Geant4/G4GenericAnalysisManager.hh:
+
 /usr/include/c++/13/ext/numeric_traits.h:
 
 /usr/include/c++/13/bits/stl_iterator.h:
@@ -3847,6 +4175,8 @@ CMakeFiles/CsI_Sim.dir/src/SteppingAction.cc.o: /home/samuel/Documents/Dissertat
 
 /usr/include/c++/13/new:
 
+/usr/local/include/Geant4/G4HnManager.hh:
+
 /usr/include/locale.h:
 
 /usr/include/x86_64-linux-gnu/bits/errno.h:
@@ -3864,6 +4194,8 @@ CMakeFiles/CsI_Sim.dir/src/SteppingAction.cc.o: /home/samuel/Documents/Dissertat
 /usr/include/c++/13/ctime:
 
 /usr/include/c++/13/complex:
+
+/usr/local/include/Geant4/tools/histo/b1:
 
 /usr/local/include/Geant4/G4UserStackingAction.hh:
 
@@ -3918,6 +4250,8 @@ CMakeFiles/CsI_Sim.dir/src/SteppingAction.cc.o: /home/samuel/Documents/Dissertat
 /usr/include/c++/13/bits/invoke.h:
 
 /usr/include/c++/13/utility:
+
+/usr/local/include/Geant4/G4Fcn.hh:
 
 /usr/include/c++/13/bits/locale_facets_nonio.tcc:
 
@@ -4017,6 +4351,8 @@ CMakeFiles/CsI_Sim.dir/src/SteppingAction.cc.o: /home/samuel/Documents/Dissertat
 
 /usr/include/c++/13/fstream:
 
+/usr/local/include/Geant4/G4THnManager.hh:
+
 /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h:
 
 /usr/local/include/Geant4/G4DCofThisEvent.hh:
@@ -4090,6 +4426,8 @@ CMakeFiles/CsI_Sim.dir/src/SteppingAction.cc.o: /home/samuel/Documents/Dissertat
 /usr/local/include/Geant4/G4ProductionCuts.hh:
 
 /usr/local/include/Geant4/G4LogicalVolume.hh:
+
+/usr/local/include/Geant4/G4AnalysisVerbose.hh:
 
 /usr/include/c++/13/condition_variable:
 
@@ -4171,6 +4509,8 @@ CMakeFiles/CsI_Sim.dir/src/SteppingAction.cc.o: /home/samuel/Documents/Dissertat
 
 /usr/include/c++/13/bits/stl_tree.h:
 
+/usr/local/include/Geant4/G4VTBaseHnManager.hh:
+
 /usr/local/include/Geant4/CLHEP/Random/RanecuEngine.h:
 
 /usr/local/include/Geant4/G4VUPLSplitter.hh:
@@ -4223,6 +4563,8 @@ CMakeFiles/CsI_Sim.dir/src/SteppingAction.cc.o: /home/samuel/Documents/Dissertat
 
 /usr/include/c++/13/bits/stl_set.h:
 
+/usr/local/include/Geant4/G4VAnalysisManager.icc:
+
 /usr/include/c++/13/bits/parse_numbers.h:
 
 /usr/include/linux/errno.h:
@@ -4265,6 +4607,8 @@ CMakeFiles/CsI_Sim.dir/src/SteppingAction.cc.o: /home/samuel/Documents/Dissertat
 
 /usr/local/include/Geant4/CLHEP/Random/Randomize.h:
 
+/usr/local/include/Geant4/tools/histo/base_histo:
+
 /usr/include/c++/13/unordered_map:
 
 /usr/include/c++/13/bits/allocator.h:
@@ -4272,6 +4616,8 @@ CMakeFiles/CsI_Sim.dir/src/SteppingAction.cc.o: /home/samuel/Documents/Dissertat
 /usr/local/include/Geant4/G4Trap.icc:
 
 /usr/include/c++/13/bits/regex_compiler.tcc:
+
+/usr/local/include/Geant4/G4THnMessenger.icc:
 
 /usr/local/include/Geant4/G4VSceneHandler.hh:
 
@@ -4593,6 +4939,8 @@ CMakeFiles/CsI_Sim.dir/src/SteppingAction.cc.o: /home/samuel/Documents/Dissertat
 
 /usr/local/include/Geant4/CLHEP/Random/RandBit.icc:
 
+/usr/local/include/Geant4/tools/histo/h2d:
+
 /usr/local/include/Geant4/G4SteppingManager.hh:
 
 /usr/include/x86_64-linux-gnu/bits/types/__FILE.h:
@@ -4602,6 +4950,8 @@ CMakeFiles/CsI_Sim.dir/src/SteppingAction.cc.o: /home/samuel/Documents/Dissertat
 /usr/local/include/Geant4/CLHEP/Random/Random.h:
 
 /usr/local/include/Geant4/CLHEP/Random/RanluxppEngine.h:
+
+/usr/local/include/Geant4/tools/histo/p2d:
 
 /usr/local/include/Geant4/CLHEP/Vector/Rotation.h:
 
@@ -4671,6 +5021,8 @@ CMakeFiles/CsI_Sim.dir/src/SteppingAction.cc.o: /home/samuel/Documents/Dissertat
 
 /usr/local/include/Geant4/CLHEP/Random/Ranlux64Engine.h:
 
+/usr/local/include/Geant4/tools/histo/h1d:
+
 /usr/local/include/Geant4/CLHEP/Random/RanshiEngine.h:
 
 /usr/local/include/Geant4/G4ParticleTable.icc:
@@ -4727,6 +5079,8 @@ CMakeFiles/CsI_Sim.dir/src/SteppingAction.cc.o: /home/samuel/Documents/Dissertat
 
 /usr/local/include/Geant4/G4ASCIITree.hh:
 
+/usr/local/include/Geant4/G4BaseAnalysisManager.hh:
+
 /usr/include/c++/13/bits/unique_lock.h:
 
 /usr/local/include/Geant4/G4MCCIndexConversionTable.hh:
@@ -4738,6 +5092,8 @@ CMakeFiles/CsI_Sim.dir/src/SteppingAction.cc.o: /home/samuel/Documents/Dissertat
 /usr/local/include/Geant4/G4VMarker.icc:
 
 /usr/local/include/Geant4/G4AllocatorPool.hh:
+
+/usr/local/include/Geant4/tools/histo/b3:
 
 /usr/local/include/Geant4/G4GPILSelection.hh:
 
@@ -4831,6 +5187,8 @@ CMakeFiles/CsI_Sim.dir/src/SteppingAction.cc.o: /home/samuel/Documents/Dissertat
 
 /usr/local/include/Geant4/G4MaterialPropertyVector.hh:
 
+/usr/local/include/Geant4/G4ToolsAnalysisManager.icc:
+
 /usr/local/include/Geant4/G4ParticleChange.icc:
 
 /usr/local/include/Geant4/G4PhysicsListHelper.hh:
@@ -4894,6 +5252,8 @@ CMakeFiles/CsI_Sim.dir/src/SteppingAction.cc.o: /home/samuel/Documents/Dissertat
 /usr/local/include/Geant4/G4OpenGLStoredQt.hh:
 
 /usr/local/include/Geant4/G4PolyhedraHistorical.hh:
+
+/usr/local/include/Geant4/G4AnalysisManagerState.hh:
 
 /usr/include/c++/13/tr1/modified_bessel_func.tcc:
 
