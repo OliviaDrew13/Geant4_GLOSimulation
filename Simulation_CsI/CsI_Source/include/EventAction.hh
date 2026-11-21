@@ -29,12 +29,18 @@ class EventAction : public G4UserEventAction
     void AddScintillationPhoton() { fScintillationPhotons += 1; } 
     void AddEdepComp(G4double edepComp){ fEdepComp += edepComp; }
     void AddEdepPhotElec(G4double edepPhotElec){ fEdepPhotElec += edepPhotElec; }
+    void AddScintPhotonEdep(G4double ScintPhotonEdep) {fScintPhotonEdep += ScintPhotonEdep;}
+    void AddAbsorpedPhotonScint(){fAbsorpedPhotonsScint += 1;}
     
     //glass
     void AddEdepGlassTotal(G4double edepGlassTot) { fEdepGlassTot += edepGlassTot; }
+    void AddGlassPhotonEdep(G4double GlassPhotonEdep) {fGlassPhotonEdep += GlassPhotonEdep;}
+    void AddAbsorpedPhotonGlass(){fAbsorpedPhotonsGlass += 1;}
     
     //ITO
     void AddEdepITOTotal(G4double edepITOTot) { fEdepITOTot += edepITOTot; }
+    void AddITOPhotonEdep(G4double ITOPhotonEdep) {fITOPhotonEdep += ITOPhotonEdep;}
+    void AddAbsorpedPhotonITO(){fAbsorpedPhotonsITO += 1;}
     
     //silicon
     void AddSiPhotonEdep(G4double SiPhotonEdep) {fSiPhotonEdep += SiPhotonEdep;}
@@ -53,12 +59,18 @@ class EventAction : public G4UserEventAction
     G4double fScintillationPhotons = 0.;
     G4double fEdepComp = 0.;
     G4double fEdepPhotElec = 0.;
+    G4double fScintPhotonEdep = 0.;
+    G4double fAbsorpedPhotonsScint = 0.;
     
     //glass
     G4double fEdepGlassTot = 0.;
+    G4double fGlassPhotonEdep = 0.;
+    G4double fAbsorpedPhotonsGlass = 0.;
 
     //ITO
     G4double fEdepITOTot = 0.;
+    G4double fITOPhotonEdep = 0.;
+    G4double fAbsorpedPhotonsITO = 0.;
     
     //silicon
     G4double fSiPhotonEdep = 0.;

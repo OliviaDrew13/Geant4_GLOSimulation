@@ -74,17 +74,106 @@ void SteppingAction::UserSteppingAction(const G4Step* step)
       
 }
 }
+   //OPTICAL PHOTONS//
+
+  //defining the trackID
+  G4Track* track= step->GetTrack();
+  const G4ParticleDefinition* particle = track->GetDefinition();
+
+//checking for interactions with ONLY optical photons within the Si
+  if (particle->GetParticleName() == "opticalphoton") {
+    G4String processName = step->GetPostStepPoint()->GetProcessDefinedStep()->GetProcessName();
+    //checking for absorbed optical photons
+    if (processName == "OpAbsorption") {
+		//getting their KE
+      G4double photonEnergy=track->GetKineticEnergy();
+
+      G4int eventID = G4EventManager::GetEventManager()->GetConstCurrentEvent()->GetEventID();
+		//filling in the second csv with every photon and their respective energy
+		//this allows us to look at a histogram of the energy emission spectra
+      auto analysisManager = G4AnalysisManager::Instance();
+      analysisManager->FillNtupleIColumn(1,0, eventID);
+      analysisManager->FillNtupleIColumn(1,1, track->GetTrackID());
+      analysisManager->FillNtupleDColumn(1,2, photonEnergy);
+      analysisManager->AddNtupleRow(1);
+      //incrementing the absorbed photon counter
+      fEventAction->AddAbsorpedPhotonScint();
+      //adding the photon energy to the total photon energy deposition
+      fEventAction->AddScintPhotonEdep(photonEnergy);
+    }
+  }
+
 }
 //glass
   if (volume==GlassScoringVolume){
     G4double edepGlassTotStep=step->GetTotalEnergyDeposit();
     fEventAction-> AddEdepGlassTotal(edepGlassTotStep);
+    
+    //OPTICAL PHOTONS//
+
+  //defining the trackID
+  G4Track* track= step->GetTrack();
+  const G4ParticleDefinition* particle = track->GetDefinition();
+
+//checking for interactions with ONLY optical photons within the Si
+  if (particle->GetParticleName() == "opticalphoton") {
+    G4String processName = step->GetPostStepPoint()->GetProcessDefinedStep()->GetProcessName();
+    //checking for absorbed optical photons
+    if (processName == "OpAbsorption") {
+		//getting their KE
+      G4double photonEnergy=track->GetKineticEnergy();
+
+      G4int eventID = G4EventManager::GetEventManager()->GetConstCurrentEvent()->GetEventID();
+		//filling in the second csv with every photon and their respective energy
+		//this allows us to look at a histogram of the energy emission spectra
+      auto analysisManager = G4AnalysisManager::Instance();
+      analysisManager->FillNtupleIColumn(2,0, eventID);
+      analysisManager->FillNtupleIColumn(2,1, track->GetTrackID());
+      analysisManager->FillNtupleDColumn(2,2, photonEnergy);
+      analysisManager->AddNtupleRow(1);
+      //incrementing the absorbed photon counter
+      fEventAction->AddAbsorpedPhotonGlass();
+      //adding the photon energy to the total photon energy deposition
+      fEventAction->AddGlassPhotonEdep(photonEnergy);
+    }
+  }
+
 }
 
 //ito
   if (volume==ITOScoringVolume){
     G4double edepITOTotStep=step->GetTotalEnergyDeposit();
     fEventAction-> AddEdepITOTotal(edepITOTotStep);
+    
+    //OPTICAL PHOTONS//
+
+  //defining the trackID
+  G4Track* track= step->GetTrack();
+  const G4ParticleDefinition* particle = track->GetDefinition();
+
+//checking for interactions with ONLY optical photons within the Si
+  if (particle->GetParticleName() == "opticalphoton") {
+    G4String processName = step->GetPostStepPoint()->GetProcessDefinedStep()->GetProcessName();
+    //checking for absorbed optical photons
+    if (processName == "OpAbsorption") {
+		//getting their KE
+      G4double photonEnergy=track->GetKineticEnergy();
+
+      G4int eventID = G4EventManager::GetEventManager()->GetConstCurrentEvent()->GetEventID();
+		//filling in the second csv with every photon and their respective energy
+		//this allows us to look at a histogram of the energy emission spectra
+      auto analysisManager = G4AnalysisManager::Instance();
+      analysisManager->FillNtupleIColumn(3,0, eventID);
+      analysisManager->FillNtupleIColumn(3,1, track->GetTrackID());
+      analysisManager->FillNtupleDColumn(3,2, photonEnergy);
+      analysisManager->AddNtupleRow(1);
+      //incrementing the absorbed photon counter
+      fEventAction->AddAbsorpedPhotonITO();
+      //adding the photon energy to the total photon energy deposition
+      fEventAction->AddITOPhotonEdep(photonEnergy);
+    }
+  }
+
 }
 
 
@@ -114,9 +203,9 @@ void SteppingAction::UserSteppingAction(const G4Step* step)
 		//filling in the second csv with every photon and their respective energy
 		//this allows us to look at a histogram of the energy emission spectra
       auto analysisManager = G4AnalysisManager::Instance();
-      analysisManager->FillNtupleIColumn(1,0, eventID);
-      analysisManager->FillNtupleIColumn(1,1, track->GetTrackID());
-      analysisManager->FillNtupleDColumn(1,2, photonEnergy);
+      analysisManager->FillNtupleIColumn(4,0, eventID);
+      analysisManager->FillNtupleIColumn(4,1, track->GetTrackID());
+      analysisManager->FillNtupleDColumn(4,2, photonEnergy);
       analysisManager->AddNtupleRow(1);
       //incrementing the absorbed photon counter
       fEventAction->AddAbsorpedPhoton();
