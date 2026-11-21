@@ -21,6 +21,8 @@ void EventAction::BeginOfEventAction(const G4Event*)
   //scintillator
   fEdep = 0.;
   fScintillationPhotons = 0.;
+  fEdepComp=0.;
+  fEdepPhotElec=0;
   //glass
   fEdepGlassTot = 0.;
   //ITO
@@ -29,6 +31,8 @@ void EventAction::BeginOfEventAction(const G4Event*)
   fSiPhotonEdep = 0.;
   fEdepSiTot = 0.;
   fAbsorpedPhotons = 0.;
+  //Al Back
+  fEdepAlBackTot = 0.;
 }
 
 
@@ -38,6 +42,8 @@ void EventAction::EndOfEventAction(const G4Event* event)
   //scintillator
   fRunAction->AddEdep(fEdep);
   fRunAction->AddScintillationPhoton(fScintillationPhotons);
+  fRunAction->AddEdepComp(fEdepComp);
+  fRunAction->AddEdepPhotElec(fEdepPhotElec);
   //glass
   fRunAction->AddEdepGlassTotal(fEdepGlassTot);
   //ITO
@@ -46,6 +52,9 @@ void EventAction::EndOfEventAction(const G4Event* event)
   fRunAction->AddSiPhotonEdep(fSiPhotonEdep);
   fRunAction->AddEdepSiliconTotal(fEdepSiTot);
   fRunAction->AddAbsorpedPhoton(fAbsorpedPhotons);
+  //AlBack
+  fRunAction->AddEdepAlBackTotal(fEdepAlBackTot);
+  
   G4int eventID = event->GetEventID();
 
 //appending data to tuples
@@ -53,12 +62,15 @@ void EventAction::EndOfEventAction(const G4Event* event)
   auto analysisManager = G4AnalysisManager::Instance();
   analysisManager->FillNtupleIColumn(0,0, eventID);
   analysisManager->FillNtupleDColumn(0,1, fEdep);
-  analysisManager->FillNtupleDColumn(0,2, fSiPhotonEdep);
-  analysisManager->FillNtupleDColumn(0,3, fEdepSiTot);
-  analysisManager->FillNtupleDColumn(0,4, fEdepITOTot);
-  analysisManager->FillNtupleDColumn(0,5, fEdepGlassTot);
-  analysisManager->FillNtupleIColumn(0,6, fScintillationPhotons);
-  analysisManager->FillNtupleIColumn(0,7, fAbsorpedPhotons);
+  analysisManager->FillNtupleDColumn(0,2, fEdepComp);
+  analysisManager->FillNtupleDColumn(0,3, fEdepPhotElec);
+  analysisManager->FillNtupleDColumn(0,4, fSiPhotonEdep);
+  analysisManager->FillNtupleDColumn(0,5, fEdepSiTot);
+  analysisManager->FillNtupleDColumn(0,6, fEdepITOTot);
+  analysisManager->FillNtupleDColumn(0,7, fEdepGlassTot);
+  analysisManager->FillNtupleDColumn(0,8, fEdepAlBackTot);
+  analysisManager->FillNtupleIColumn(0,9, fScintillationPhotons);
+  analysisManager->FillNtupleIColumn(0,10, fAbsorpedPhotons);
   analysisManager->AddNtupleRow(0);
   //What this does: Each event ends with one new row in the CSV containing the total energy deposited in the scoring volume during that event.
 }

@@ -29,6 +29,7 @@ class SteppingAction : public G4UserSteppingAction
     G4LogicalVolume* SiScoringVolume = nullptr;
     G4LogicalVolume* GlassScoringVolume = nullptr;
     G4LogicalVolume* ITOScoringVolume = nullptr;
+    G4LogicalVolume* AlBackScoringVolume = nullptr;
 };
 
 }  // namespace B1

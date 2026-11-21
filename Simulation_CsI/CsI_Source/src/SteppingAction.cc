@@ -42,6 +42,7 @@ void SteppingAction::UserSteppingAction(const G4Step* step)
     SiScoringVolume = detConstruction->GetSiScoringVolume();
     GlassScoringVolume = detConstruction->GetGlassScoringVolume();
     ITOScoringVolume = detConstruction->GetITOScoringVolume();
+    AlBackScoringVolume = detConstruction->GetAlBackScoringVolume();
   }
 
   // get volume of the current step
@@ -49,12 +50,30 @@ void SteppingAction::UserSteppingAction(const G4Step* step)
     step->GetPreStepPoint()->GetTouchableHandle()->GetVolume()->GetLogicalVolume();
 
   // check if we are in any scoring volume
-  if (volume != scintScoringVolume && volume != SiScoringVolume && volume != GlassScoringVolume && volume != ITOScoringVolume) {return;}
+  if (volume != scintScoringVolume && volume != SiScoringVolume && volume != GlassScoringVolume && volume != ITOScoringVolume && volume != AlBackScoringVolume ) {return;}
 
   // collect total energy deposited the CsI in this step, from gamma or otherwise
   if (volume == scintScoringVolume){
   G4double edepStep = step->GetTotalEnergyDeposit();
   fEventAction->AddEdep(edepStep);
+  
+  //tracking compton scattering and photoelectric processes only in the scintillator (hopefully)
+  const auto secondaries = step->GetSecondaryInCurrentStep();
+  for (const auto sec : *secondaries){
+   if (sec->GetDefinition() ->GetParticleName() == "e-"){
+      G4double electronKE = sec->GetKineticEnergy();
+
+      auto creatorProcess=sec->GetCreatorProcess() ->GetProcessName();
+
+      if (creatorProcess == "compt"){
+        fEventAction->AddEdepComp(electronKE);
+    }
+      if (creatorProcess == "phot"){
+        fEventAction->AddEdepPhotElec(electronKE);
+    }
+      
+}
+}
 }
 //glass
   if (volume==GlassScoringVolume){
@@ -105,6 +124,12 @@ void SteppingAction::UserSteppingAction(const G4Step* step)
       fEventAction->AddSiPhotonEdep(photonEnergy);
     }
   }
+}
+
+  if (volume == AlBackScoringVolume){
+	  //calculating total energy deposited in the silicon from all sources
+    G4double edepAlBackTotStep=step->GetTotalEnergyDeposit();
+    fEventAction->AddEdepAlBackTotal(edepAlBackTotStep); 
 }
 
 }

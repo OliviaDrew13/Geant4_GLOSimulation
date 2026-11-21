@@ -25,6 +25,7 @@ class DetectorConstruction : public G4VUserDetectorConstruction
     G4LogicalVolume* GetGlassScoringVolume() const { return GlassScoringVolume; }
     G4LogicalVolume* GetITOScoringVolume() const { return ITOScoringVolume; }
     G4LogicalVolume* GetSiScoringVolume() const { return SiScoringVolume; }
+    G4LogicalVolume* GetAlBackScoringVolume() const { return AlBackScoringVolume; }
 
   protected:
   //nullptrs
@@ -32,6 +33,7 @@ class DetectorConstruction : public G4VUserDetectorConstruction
     G4LogicalVolume* GlassScoringVolume = nullptr;
     G4LogicalVolume* ITOScoringVolume = nullptr;
     G4LogicalVolume* SiScoringVolume = nullptr;
+    G4LogicalVolume* AlBackScoringVolume = nullptr;
 };
 
 }  // namespace B1

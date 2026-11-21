@@ -31,6 +31,9 @@ class RunAction : public G4UserRunAction
 	//scintilator
     void AddEdep(G4double edep);
     void AddScintillationPhoton(G4double photons);
+    void AddEdepComp(G4double edepComp);
+    void AddEdepPhotElec(G4double edepPhotElec);
+    
     
     //glass
     void AddEdepGlassTotal(G4double edepGlassTot);
@@ -43,12 +46,17 @@ class RunAction : public G4UserRunAction
     void AddEdepSiliconTotal(G4double edepSiTot);
     void AddAbsorpedPhoton(G4double abphotons);
 
+	//Al Back
+	void AddEdepAlBackTotal(G4double edepAlBackTot);
+	
   private:
     //Starting values for the accumulateables
     //scintillator
     G4Accumulable<G4double> fEdep = 0.;
     G4Accumulable<G4double> fEdep2 = 0.;
     G4Accumulable<G4int> fScintillationPhotons = 0.;
+    G4Accumulable<G4double> fEdepComp = 0.;
+    G4Accumulable<G4double> fEdepPhotElec = 0.;
     
     //Glass
     G4Accumulable<G4double> fEdepGlassTot = 0.;
@@ -60,6 +68,9 @@ class RunAction : public G4UserRunAction
     G4Accumulable<G4double> fSiPhotonEdep = 0.;
     G4Accumulable<G4double> fEdepSiTot = 0.;
     G4Accumulable<G4int> fAbsorpedPhotons = 0.;
+    
+    //Al Backplate
+    G4Accumulable<G4double> fEdepAlBackTot = 0.;
 };
 
 }  // namespace B1

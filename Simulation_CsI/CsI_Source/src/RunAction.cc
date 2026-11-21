@@ -39,6 +39,8 @@ RunAction::RunAction()
   //scintillator
   accumulableManager->Register(fEdep);
   accumulableManager->Register(fEdep2);
+  accumulableManager->Register(fEdepComp);
+  accumulableManager->Register(fEdepPhotElec);
   //glass
   accumulableManager->Register(fEdepGlassTot);
   //ITO
@@ -46,6 +48,8 @@ RunAction::RunAction()
   //silicon
   accumulableManager->Register(fSiPhotonEdep);
   accumulableManager->Register(fEdepSiTot);
+  //Al Back
+  accumulableManager->Register(fEdepAlBackTot);
 }
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
@@ -65,15 +69,19 @@ void RunAction::BeginOfRunAction(const G4Run* run)
   analysisManager->CreateNtuple("EventData", "CsI(Tl)");   //tuple 0 // the first option of the tuple is appended after run number in the CSV name
   analysisManager->CreateNtupleIColumn("Event"); //column0
   analysisManager->CreateNtupleDColumn("Energy Deposited in CsI by single Gamma (MeV)");  // column 1
-  analysisManager->CreateNtupleDColumn("Energy Deposited in Si by Optical Photons (MeV)");  // column 2
-  analysisManager->CreateNtupleDColumn("Total Energy Deposited in Si (MeV)");  // column 3
-  analysisManager->CreateNtupleDColumn("Total Energy Deposited in Glass (MeV)");  // column 4
-  analysisManager->CreateNtupleDColumn("Total Energy Deposited in ITO (MeV)");  // column 5
-  analysisManager->CreateNtupleIColumn("Number of Produced Scintillation Photons"); //column 6
-  analysisManager->CreateNtupleIColumn("Number of Photons absorped by Si"); //column 7
+  analysisManager->CreateNtupleDColumn("Energy Deposited in CsI by single Gamma - Compton (MeV)");  // column 2
+  analysisManager->CreateNtupleDColumn("Energy Deposited in CsI by single Gamma - Photoelectric (MeV)");  // column 3
+  analysisManager->CreateNtupleDColumn("Energy Deposited in Si by Optical Photons (MeV)");  // column 4
+  analysisManager->CreateNtupleDColumn("Total Energy Deposited in Si (MeV)");  // column 5
+  analysisManager->CreateNtupleDColumn("Total Energy Deposited in Glass (MeV)");  // column 6
+  analysisManager->CreateNtupleDColumn("Total Energy Deposited in ITO (MeV)");  // column 7
+  analysisManager->CreateNtupleDColumn("Total Energy Deposited in Al Back (MeV)");  // column 8
+  analysisManager->CreateNtupleIColumn("Number of Produced Scintillation Photons"); //column 9
+  analysisManager->CreateNtupleIColumn("Number of Photons absorped by Si"); //column 10
   analysisManager->FinishNtuple();
 
   // photon absorbtion data
+  //silicon
   analysisManager->CreateNtuple("PhotonTracks", "Si");   //tuple 1
   analysisManager->CreateNtupleIColumn("Event");  // column 0
   analysisManager->CreateNtupleIColumn("Photon Track num");  // column 1
@@ -168,6 +176,17 @@ void RunAction::AddScintillationPhoton(G4double photons)
   fScintillationPhotons += photons;
 }
 
+void RunAction::AddEdepComp(G4double edepComp)
+{
+  fEdepComp += edepComp;
+}
+
+void RunAction::AddEdepPhotElec(G4double edepPhotElec)
+{
+  fEdepPhotElec  += edepPhotElec;
+}
+
+
 //glass
 void RunAction::AddEdepGlassTotal(G4double edepGlassTot)
 {
@@ -195,6 +214,12 @@ void RunAction::AddEdepSiliconTotal(G4double edepSiTot)
 void RunAction::AddAbsorpedPhoton(G4double abphotons)
 {
   fAbsorpedPhotons += abphotons;
+}
+
+//Al Back
+void RunAction::AddEdepAlBackTotal(G4double edepAlBackTot)
+{
+  fEdepAlBackTot += edepAlBackTot;
 }
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......

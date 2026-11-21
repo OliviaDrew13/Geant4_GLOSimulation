@@ -329,15 +329,15 @@ G4VPhysicalVolume* DetectorConstruction::Construct()
   
   //Al
   //position vector
-  G4ThreeVector posAl = G4ThreeVector(0*cm, 0*cm, 1100380*nm); //Al thickness is 100nm
+  G4ThreeVector posAlBack = G4ThreeVector(0*cm, 0*cm, 1100380*nm); //Al thickness is 100nm
   //box parameters
-  G4double Al_X = 56.7*mm, Al_Y = 96.7*mm, Al_Z = 100*nm;
+  G4double AlBack_X = 56.7*mm, AlBack_Y = 96.7*mm, AlBack_Z = 100*nm;
   //defining the box
-  auto solid_Al = new G4Box("Al", 0.5*Al_X, 0.5*Al_Y, 0.5*Al_Z);
+  auto solid_AlBack = new G4Box("Al", 0.5*AlBack_X, 0.5*AlBack_Y, 0.5*AlBack_Z);
   //defining logical volume
-  auto logicAl = new G4LogicalVolume(solid_Al, mAl, "Aluminium");
+  auto logicAlBack = new G4LogicalVolume(solid_AlBack, mAl, "Aluminium");
   //placing the Al
-  new G4PVPlacement(nullptr, posAl, logicAl, "Al", logicEnv, false, 0, checkOverlaps);
+  new G4PVPlacement(nullptr, posAlBack, logicAlBack, "Al", logicEnv, false, 0, checkOverlaps);
   
 
   // Setting scoring volumes
@@ -345,6 +345,7 @@ G4VPhysicalVolume* DetectorConstruction::Construct()
   GlassScoringVolume = logicGlass;
   ITOScoringVolume = logicITO;
   SiScoringVolume = logicSi;
+  AlBackScoringVolume = logicAlBack;
 
   //
   // always return the physical World

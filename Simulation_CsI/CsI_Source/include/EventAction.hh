@@ -27,6 +27,8 @@ class EventAction : public G4UserEventAction
 	//scintillator
     void AddEdep(G4double edep) { fEdep += edep; }
     void AddScintillationPhoton() { fScintillationPhotons += 1; } 
+    void AddEdepComp(G4double edepComp){ fEdepComp += edepComp; }
+    void AddEdepPhotElec(G4double edepPhotElec){ fEdepPhotElec += edepPhotElec; }
     
     //glass
     void AddEdepGlassTotal(G4double edepGlassTot) { fEdepGlassTot += edepGlassTot; }
@@ -38,7 +40,10 @@ class EventAction : public G4UserEventAction
     void AddSiPhotonEdep(G4double SiPhotonEdep) {fSiPhotonEdep += SiPhotonEdep;}
     void AddEdepSiliconTotal(G4double edepSiTot) { fEdepSiTot += edepSiTot; } 
     void AddAbsorpedPhoton(){fAbsorpedPhotons += 1;}
-
+    
+    //Al Back
+	void AddEdepAlBackTotal(G4double edepAlBackTot) { fEdepAlBackTot += edepAlBackTot; } 
+	
   private:
     RunAction* fRunAction = nullptr;
     //starting values for the above functions
@@ -46,6 +51,8 @@ class EventAction : public G4UserEventAction
     //scintillator
     G4double fEdep = 0.;
     G4double fScintillationPhotons = 0.;
+    G4double fEdepComp = 0.;
+    G4double fEdepPhotElec = 0.;
     
     //glass
     G4double fEdepGlassTot = 0.;
@@ -56,7 +63,11 @@ class EventAction : public G4UserEventAction
     //silicon
     G4double fSiPhotonEdep = 0.;
     G4double fEdepSiTot = 0.;
-    G4double fAbsorpedPhotons = 0;
+    G4double fAbsorpedPhotons = 0.;
+    
+    //Al Back
+    G4double fEdepAlBackTot = 0.;
+    
 };
 
 }  // namespace B1
