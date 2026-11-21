@@ -40,6 +40,8 @@ void SteppingAction::UserSteppingAction(const G4Step* step)
       G4RunManager::GetRunManager()->GetUserDetectorConstruction());
     scintScoringVolume = detConstruction->GetScintScoringVolume();
     SiScoringVolume = detConstruction->GetSiScoringVolume();
+    GlassScoringVolume = detConstruction->GetGlassScoringVolume();
+    ITOScoringVolume = detConstruction->GetITOScoringVolume();
   }
 
   // get volume of the current step
