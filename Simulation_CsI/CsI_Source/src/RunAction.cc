@@ -36,10 +36,16 @@ RunAction::RunAction()
 
   // Register accumulables to the accumulable manager, this allows us to manage and reset them when required
   G4AccumulableManager* accumulableManager = G4AccumulableManager::Instance();
+  //scintillator
   accumulableManager->Register(fEdep);
   accumulableManager->Register(fEdep2);
+  //glass
+  accumulableManager->Register(fEdepGlassTot);
+  //ITO
+  accumulableManager->Register(fEdepITOTot);
+  //silicon
   accumulableManager->Register(fSiPhotonEdep);
-  accumulableManager->Register(fSiPhotonEdep2);
+  accumulableManager->Register(fEdepSiTot);
 }
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
@@ -59,9 +65,12 @@ void RunAction::BeginOfRunAction(const G4Run* run)
   analysisManager->CreateNtuple("EventData", "CsI(Tl)");   //tuple 0 // the first option of the tuple is appended after run number in the CSV name
   analysisManager->CreateNtupleIColumn("Event"); //column0
   analysisManager->CreateNtupleDColumn("Energy Deposited in CsI by single Gamma (MeV)");  // column 1
-  analysisManager->CreateNtupleDColumn("Energy Deposited in Si by All Photons (MeV)");  // column 2
-  analysisManager->CreateNtupleIColumn("Number of Produced Scintillation Photons"); //column 3
-  analysisManager->CreateNtupleIColumn("Number of Photons absorped by Si"); //column 4
+  analysisManager->CreateNtupleDColumn("Energy Deposited in Si by Optical Photons (MeV)");  // column 2
+  analysisManager->CreateNtupleDColumn("Total Energy Deposited in Si (MeV)");  // column 3
+  analysisManager->CreateNtupleDColumn("Total Energy Deposited in Glass (MeV)");  // column 4
+  analysisManager->CreateNtupleDColumn("Total Energy Deposited in ITO (MeV)");  // column 5
+  analysisManager->CreateNtupleIColumn("Number of Produced Scintillation Photons"); //column 6
+  analysisManager->CreateNtupleIColumn("Number of Photons absorped by Si"); //column 7
   analysisManager->FinishNtuple();
 
   // photon absorbtion data
@@ -147,22 +156,40 @@ void RunAction::EndOfRunAction(const G4Run* run)
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
 //required for each type of accumulation function
+//scintillator
 void RunAction::AddEdep(G4double edep)
 {
   fEdep += edep;
   fEdep2 += edep * edep;
 }
 
-void RunAction::AddSiPhotonEdep(G4double SiPhotonEdep)
-{
-  fSiPhotonEdep += SiPhotonEdep;
-  fSiPhotonEdep2 += SiPhotonEdep * SiPhotonEdep;
-}
-
-
 void RunAction::AddScintillationPhoton(G4double photons)
 {
   fScintillationPhotons += photons;
+}
+
+//glass
+void RunAction::AddEdepGlassTotal(G4double edepGlassTot)
+{
+  fEdepGlassTot += edepGlassTot;
+}
+
+//ITO
+void RunAction::AddEdepITOTotal(G4double edepITOTot)
+{
+  fEdepITOTot += edepITOTot;
+}
+
+
+//silicon
+void RunAction::AddSiPhotonEdep(G4double SiPhotonEdep)
+{
+  fSiPhotonEdep += SiPhotonEdep;
+}
+
+void RunAction::AddEdepSiliconTotal(G4double edepSiTot)
+{
+  fEdepSiTot += edepSiTot;
 }
 
 void RunAction::AddAbsorpedPhoton(G4double abphotons)

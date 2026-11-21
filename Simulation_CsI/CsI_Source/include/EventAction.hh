@@ -24,17 +24,38 @@ class EventAction : public G4UserEventAction
     void EndOfEventAction(const G4Event* event) override;
 
 	//defining the functions to calculate the collected data
+	//scintillator
     void AddEdep(G4double edep) { fEdep += edep; }
+    void AddScintillationPhoton() { fScintillationPhotons += 1; } 
+    
+    //glass
+    void AddEdepGlassTotal(G4double edepGlassTot) { fEdepGlassTot += edepGlassTot; }
+    
+    //ITO
+    void AddEdepITOTotal(G4double edepITOTot) { fEdepITOTot += edepITOTot; }
+    
+    //silicon
     void AddSiPhotonEdep(G4double SiPhotonEdep) {fSiPhotonEdep += SiPhotonEdep;}
-    void AddScintillationPhoton() { fScintillationPhotons += 1; }  
+    void AddEdepSiliconTotal(G4double edepSiTot) { fEdepSiTot += edepSiTot; } 
     void AddAbsorpedPhoton(){fAbsorpedPhotons += 1;}
 
   private:
     RunAction* fRunAction = nullptr;
     //starting values for the above functions
+    
+    //scintillator
     G4double fEdep = 0.;
-    G4double fSiPhotonEdep = 0.;
     G4double fScintillationPhotons = 0.;
+    
+    //glass
+    G4double fEdepGlassTot = 0.;
+
+    //ITO
+    G4double fEdepITOTot = 0.;
+    
+    //silicon
+    G4double fSiPhotonEdep = 0.;
+    G4double fEdepSiTot = 0.;
     G4double fAbsorpedPhotons = 0;
 };
 

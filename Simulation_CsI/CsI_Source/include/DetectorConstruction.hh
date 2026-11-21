@@ -22,11 +22,15 @@ class DetectorConstruction : public G4VUserDetectorConstruction
 	
 	// defining the scoring volumes from the logical volumes
     G4LogicalVolume* GetScintScoringVolume() const { return scintScoringVolume; }//scintillator scoring volume
+    G4LogicalVolume* GetGlassScoringVolume() const { return GlassScoringVolume; }
+    G4LogicalVolume* GetITOScoringVolume() const { return ITOScoringVolume; }
     G4LogicalVolume* GetSiScoringVolume() const { return SiScoringVolume; }
 
   protected:
   //nullptrs
     G4LogicalVolume* scintScoringVolume = nullptr;
+    G4LogicalVolume* GlassScoringVolume = nullptr;
+    G4LogicalVolume* ITOScoringVolume = nullptr;
     G4LogicalVolume* SiScoringVolume = nullptr;
 };
 

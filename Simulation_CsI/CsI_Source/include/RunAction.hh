@@ -27,18 +27,38 @@ class RunAction : public G4UserRunAction
     void EndOfRunAction(const G4Run*) override;
 	
 	//defining the intake types for the functions for the accumulateables
+	
+	//scintilator
     void AddEdep(G4double edep);
-    void AddSiPhotonEdep(G4double SiPhotonEdep);
     void AddScintillationPhoton(G4double photons);
+    
+    //glass
+    void AddEdepGlassTotal(G4double edepGlassTot);
+    
+    //ITO
+    void AddEdepITOTotal(G4double edepITOTot);
+    
+    //silicon
+    void AddSiPhotonEdep(G4double SiPhotonEdep);
+    void AddEdepSiliconTotal(G4double edepSiTot);
     void AddAbsorpedPhoton(G4double abphotons);
 
   private:
     //Starting values for the accumulateables
+    //scintillator
     G4Accumulable<G4double> fEdep = 0.;
     G4Accumulable<G4double> fEdep2 = 0.;
-    G4Accumulable<G4double> fSiPhotonEdep = 0.;
-    G4Accumulable<G4double> fSiPhotonEdep2 = 0.;
     G4Accumulable<G4int> fScintillationPhotons = 0.;
+    
+    //Glass
+    G4Accumulable<G4double> fEdepGlassTot = 0.;
+    
+    //ITO
+    G4Accumulable<G4double> fEdepITOTot = 0.;
+    
+    //silicon
+    G4Accumulable<G4double> fSiPhotonEdep = 0.;
+    G4Accumulable<G4double> fEdepSiTot = 0.;
     G4Accumulable<G4int> fAbsorpedPhotons = 0.;
 };
 

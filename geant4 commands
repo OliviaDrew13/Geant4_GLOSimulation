@@ -22,6 +22,8 @@ setting up a make file (step 2, optional if already exists):
  - if getting file does not exist, check to see if step 1 has been run in this instance of the terminal
 - if any changes are made to the CMake file, this will cause issues with compilation into the build directory, need to delete cache before remaking
 
+cd /home/samuel/Documents/Dissertation/Geant4_GLOSimulation/Simulation_CsI/CsI_Build
+
 ##
 cd [FILE_DIRECTORY_CONTAINING_SOURCE_DIRECTORY]
 mkdir [NAME]_Build

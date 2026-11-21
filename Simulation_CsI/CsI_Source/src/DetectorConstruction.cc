@@ -342,8 +342,9 @@ G4VPhysicalVolume* DetectorConstruction::Construct()
 
   // Setting scoring volumes
   scintScoringVolume = logicCsI_Tl;
+  GlassScoringVolume = logicGlass;
+  ITOScoringVolume = logicITO;
   SiScoringVolume = logicSi;
-  
 
   //
   // always return the physical World

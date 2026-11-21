@@ -34,6 +34,7 @@ void SteppingAction::UserSteppingAction(const G4Step* step)
 
 //if this is the first step and we don't have our scoring volumes defined, we define them here
 //as we define them at the same time, we can just check for one
+//also a good check to make sure we have a scintillator
   if (!scintScoringVolume) {
     const auto detConstruction = static_cast<const DetectorConstruction*>(
       G4RunManager::GetRunManager()->GetUserDetectorConstruction());
@@ -46,16 +47,37 @@ void SteppingAction::UserSteppingAction(const G4Step* step)
     step->GetPreStepPoint()->GetTouchableHandle()->GetVolume()->GetLogicalVolume();
 
   // check if we are in any scoring volume
-  if (volume != scintScoringVolume && volume != SiScoringVolume) {return;}
+  if (volume != scintScoringVolume && volume != SiScoringVolume && volume != GlassScoringVolume && volume != ITOScoringVolume) {return;}
 
   // collect total energy deposited the CsI in this step, from gamma or otherwise
   if (volume == scintScoringVolume){
   G4double edepStep = step->GetTotalEnergyDeposit();
   fEventAction->AddEdep(edepStep);
 }
+//glass
+  if (volume==GlassScoringVolume){
+    G4double edepGlassTotStep=step->GetTotalEnergyDeposit();
+    fEventAction-> AddEdepGlassTotal(edepGlassTotStep);
+}
+
+//ito
+  if (volume==ITOScoringVolume){
+    G4double edepITOTotStep=step->GetTotalEnergyDeposit();
+    fEventAction-> AddEdepITOTotal(edepITOTotStep);
+}
+
+
 
   //working in only Si scoring volume
   if (volume == SiScoringVolume){
+//TOTAL ENERGY//
+//calculating total energy deposited in the silicon from all sources
+  G4double edepSiTotStep=step->GetTotalEnergyDeposit();
+  fEventAction->AddEdepSiliconTotal(edepSiTotStep);      // adding the total energy deposition of that step
+
+//OPTICAL PHOTONS//
+
+  //defining the trackID
   G4Track* track= step->GetTrack();
   const G4ParticleDefinition* particle = track->GetDefinition();
 

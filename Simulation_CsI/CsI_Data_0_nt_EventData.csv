@@ -4,11 +4,19 @@
 #vector_separator 59
 #column int Event
 #column double Energy Deposited in CsI by single Gamma (MeV)
-#column double Energy Deposited in Si by All Photons (MeV)
+#column double Energy Deposited in Si by Optical Photons (MeV)
+#column double Total Energy Deposited in Si (MeV)
+#column double Total Energy Deposited in Glass (MeV)
+#column double Total Energy Deposited in ITO (MeV)
 #column int Number of Produced Scintillation Photons
 #column int Number of Photons absorped by Si
-0,0,0,0,0
-1,0.0796059,0.00143417,4256,594
-2,0.69547,0.0130573,37969,5378
-3,0,0,0,0
-4,0,0,0,0
+0,0,0,0,0,0,0,0
+1,0.0796059,0.00143417,0.00144838,0,0,4256,594
+2,0.69547,0.0130573,0.0132796,0,0,37969,5378
+3,0,0,0,0,0,0,0
+4,0,0,0,0,0,0,0
+5,0,0,0,0,0,0,0
+6,0,0,0,0,0,0,0
+7,0.0323302,0.000480043,0.000490812,0,0,1689,197
+8,0.695344,0.0132098,0.0134118,0,0,37801,5440
+9,0.0603747,0.000923755,0.000932492,0,0,3312,378
